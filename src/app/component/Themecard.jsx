@@ -4,13 +4,15 @@ import Image from 'next/image'
 
 function Themecard({ image, title, description, backgroundColor }) {
     return (
-      <div className='-10 pt-24 rounded-md w-full' style={{ backgroundColor }}>
-        <Image src={image}
-        alt={title}
-        width={224} 
-        height={224} />
-        <h2>{title}</h2>
-        <p>{description}</p>
+      <div className=' w-full h-[32rem] space-y-3 p-5' style={{ backgroundColor }}>
+        <div className='flex justify-center h-60'>
+          <Image src={image}
+            alt={title}
+            width={400} 
+            height={400} />
+        </div>
+        <h2 className='font-bold text-2xl'>{title}</h2>
+        <p className='font-Satisfy text-xl'>{description}</p>
       </div>
     );
   }
