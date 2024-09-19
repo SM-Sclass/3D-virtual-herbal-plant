@@ -7,7 +7,7 @@ export const plants = {
     },
     turmeric: {
       title: "Turmeric",
-      modelUrl: "/assets/models/turmeric.glb",
+      modelUrl: "/assets/models/chamomile.glb",
       description: "Turmeric is a powerful anti-inflammatory and antioxidant-rich herb with a variety of health benefits.",
     },
     amla: {
