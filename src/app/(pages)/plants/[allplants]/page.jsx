@@ -1,29 +1,28 @@
-"use client";
+"use client"
 import { useParams } from 'next/navigation';
-import { useEffect, useState, Suspense } from 'react';
+import Feact, { useEffect, useState, Suspense, useMemo } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, useGLTF } from '@react-three/drei';
 import { Dialog } from '@headlessui/react';
+import { plants } from '../../../utils/plantdata';
 
 const PlantDetails = () => {
   const { allplants } = useParams(); // Get the dynamic segment (plant name)
-  const [modelUrl, setModelUrl] = useState('');
+  const [plantData, setPlantData] = useState(null); // State for plant data
   const [isFullView, setIsFullView] = useState(false); // State for full view
-
-  const modelUrls = {
-    giloy: '/assets/models/chamomile.glb',
-    turmeric: '/assets/models/turmeric.glb',
-    amla: '/assets/models/amla.glb',
-    moringa: '/assets/models/moringa.glb',
-  };
 
   useEffect(() => {
     if (allplants) {
-      setModelUrl(modelUrls[allplants.toLowerCase()] || '');
+      const plant = plants[allplants.toLowerCase()];
+      if (plant) {
+        setPlantData(plant);
+      } else {
+        setPlantData(null); // Reset if plant not found
+      }
     }
   }, [allplants]);
 
-  if (!modelUrl) return <div>Loading...</div>;
+  if (!plantData) return <div>Loading...</div>; // Loading or invalid plant message
 
   return (
     <div className="flex flex-col md:flex-row h-screen bg-[rgb(21,128,61)]">
@@ -36,7 +35,7 @@ const PlantDetails = () => {
           <ambientLight />
           <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
           <Suspense fallback={null}>
-            <Model url={modelUrl} scale={4} />
+            <MemoizedModel url={plantData.modelUrl} scale={4} /> {/* Use memoized model */}
           </Suspense>
           <OrbitControls enableZoom={true} />
         </Canvas>
@@ -52,10 +51,10 @@ const PlantDetails = () => {
       {/* Right section: Scrollable plant info */}
       <div className="md:w-2/3 p-8 overflow-y-auto text-white">
         <h1 className="text-4xl font-bold text-yellow-500">
-          Plant Details for {allplants}
+          {plantData.title} {/* Use title from plantData */}
         </h1>
         <p className="mt-6 text-lg leading-relaxed">
-          Explore the amazing properties and benefits of {allplants}. This section contains detailed information that may require scrolling for more insights.
+          {plantData.description} {/* Use description from plantData */}
         </p>
         {/* Add more detailed info here */}
       </div>
@@ -80,7 +79,7 @@ const PlantDetails = () => {
               <ambientLight />
               <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
               <Suspense fallback={null}>
-                <Model url={modelUrl} scale={5} />
+                <MemoizedModel url={plantData.modelUrl} scale={5} /> {/* Use memoized model */}
               </Suspense>
               <OrbitControls enableZoom={true} />
             </Canvas>
@@ -91,10 +90,10 @@ const PlantDetails = () => {
   );
 };
 
-// Model component to load GLTF models and control the scale
-const Model = ({ url, scale = 1 }) => {
-  const { scene } = useGLTF(url);
-  return <primitive object={scene} scale={[scale, scale, scale]} />;
-};
-
+// Memoized Model component to load GLTF models and control the scale
+const MemoizedModel = ({ url, scale = 1 }) => {
+  const scene = useMemo(() => {
+    const { scene } = useGLTF(url);
+    return scene;
+  }, [url]);}
 export default PlantDetails;
