@@ -1,5 +1,6 @@
-import React from 'react'
-import Themecard from "../../component/Themecard"
+
+import Link from 'next/link';
+import Themecard from "../../component/Themecard";
 
 function Tour() {
   const themes = [
@@ -39,8 +40,8 @@ function Tour() {
         backgroundColor: "#008080"
       }
     }
-  ]
-  
+  ];
+
   return (
     <div className='w-full py-7 bg-green-950'>
       <div className='flex flex-col gap-3 items-center text-center mb-16'>
@@ -51,8 +52,9 @@ function Tour() {
       </div>
       <div className='container w-full grid grid-cols-1 gap-x-8 gap-y-20 md:grid-cols-2'>
         {themes.map((theme) => (
-          <div key={theme.name} className='space-y-4 p-5 hover:shadow-2xl hover:-translate-y-1 bg-white rounded-xl' style={{ backgroundColor: theme.cards.backgroundColor }}>
-            <div className="text-2xl text-center font-bold text-white" >{theme.name}</div>
+          <Link key={theme.cards.title} href={`/plants/${theme.cards.title.toLowerCase()}`}>
+          <div className='space-y-4 p-5 hover:shadow-2xl hover:-translate-y-1 bg-white rounded-xl' style={{ backgroundColor: theme.cards.backgroundColor }}>
+            <div className="text-2xl text-center font-bold text-white">{theme.name}</div>
             <div className="container flex items-center justify-center">
               <Themecard
                 key={theme.cards.title}
@@ -63,10 +65,12 @@ function Tour() {
               />
             </div>
           </div>
+        </Link>
+        
         ))}
       </div>
     </div>
-  )
+  );
 }
 
-export default Tour
+export default Tour;
