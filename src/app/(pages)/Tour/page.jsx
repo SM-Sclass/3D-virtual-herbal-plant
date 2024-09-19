@@ -27,7 +27,7 @@ function Tour() {
         image: "/assets/img/amla.png",
         title: "Amla",
         description: "Amla, or Indian Gooseberry, is a powerful ingredient for hair health, used to strengthen hair follicles, prevent dandruff, and promote hair growth.",
-        backgroundColor: "#4A2C2A"
+        backgroundColor: "#b53128"
       }
     },
     {
@@ -36,24 +36,24 @@ function Tour() {
         image: "/assets/img/moringa.png",
         title: "Moringa",
         description: "Known as a superfood, Moringa is rich in vitamins and antioxidants, making it an excellent herbal remedy for boosting the immune system and overall health.",
-        backgroundColor: "#008080"
+        backgroundColor: "#ccaa4e"
       }
     }
   ]
   
   return (
-    <div className='w-full py-7 bg-green-950'>
+    <div className='w-full py-7 bg-green-700'>
       <div className='flex flex-col gap-3 items-center text-center mb-16'>
         <h2 className='text-yellow-500 text-3xl font-bold'>Themes</h2>
         <p className='max-w-2xl font-Satisfy text-2xl'>
           Explore diverse plant themes that transform your space into a vibrant tapestry of nature's beauty and healing.
         </p>
       </div>
-      <div className='container w-full grid grid-cols-1 gap-x-8 gap-y-20 md:grid-cols-2'>
+      <div className='container w-full grid grid-cols-1 gap-x-8 gap-y-8 cursor-pointer md:grid-cols-2'>
         {themes.map((theme) => (
-          <div key={theme.name} className='space-y-4 p-5 hover:shadow-2xl hover:-translate-y-1 bg-white rounded-xl' style={{ backgroundColor: theme.cards.backgroundColor }}>
-            <div className="text-2xl text-center font-bold text-white" >{theme.name}</div>
-            <div className="container flex items-center justify-center">
+          <div key={theme.name} className='space-y-4 p-5 hover:shadow-2xl hover:-translate-y-2 duration-200 bg-green-950 rounded-xl'>
+            <div className="text-2xl text-center font-bold text-white" style={{color: theme.cards.backgroundColor}} >{theme.name}</div>
+            <div className="container flex justify-center">
               <Themecard
                 key={theme.cards.title}
                 image={theme.cards.image}
