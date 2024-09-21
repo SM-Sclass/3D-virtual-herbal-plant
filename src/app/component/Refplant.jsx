@@ -1,5 +1,6 @@
 import React from 'react'
 import Plantcard from "./Plantcard"
+import RefPlantcard from "./RefPlantcard"
 function Refplant() {
     const images = {
         Nephrolepisexaltata: {
@@ -31,7 +32,7 @@ function Refplant() {
             </div>
             <div className='container w-full grid grid-cols-1 gap-x-8 gap-y-36 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
                 {Object.entries(images).map(([key, { imageLink, title, details }]) => (
-                    <Plantcard
+                    <RefPlantcard
                         key={key}
                         image={imageLink}
                         title={title}

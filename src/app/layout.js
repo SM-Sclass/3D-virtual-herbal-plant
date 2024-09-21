@@ -1,6 +1,7 @@
 import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "./component/Navbar";
+import { BookmarkProvider } from "./contextapi/BookmarkContext"; // Import your BookmarkProvider
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -29,12 +30,13 @@ export default function RootLayout({ children }) {
           href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css"
         />
       </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <Navbar />
-        <div className="h-32"></div>
-        {children}
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <BookmarkProvider>
+          <Navbar />
+          <div className="h-32 bg-green-700"></div>
+          {children}
+        </BookmarkProvider>
+
       </body>
     </html>
   );

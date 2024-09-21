@@ -1,5 +1,7 @@
+"use client"
 import React from 'react'
 import Themecard from "../../component/Themecard"
+import Link from 'next/link'
 
 function Tour() {
   const themes = [
@@ -39,8 +41,8 @@ function Tour() {
         backgroundColor: "#ccaa4e"
       }
     }
-  ]
-  
+  ];
+
   return (
     <div className='w-full py-7 bg-green-700'>
       <div className='flex flex-col gap-3 items-center text-center mb-16'>
@@ -51,6 +53,8 @@ function Tour() {
       </div>
       <div className='container w-full grid grid-cols-1 gap-x-8 gap-y-8 cursor-pointer md:grid-cols-2'>
         {themes.map((theme) => (
+
+          <Link key={theme.cards.title}href={`/Tour/${theme.name.toLowerCase().replace(/\s+/g, '')}`}>
           <div key={theme.name} className='space-y-4 p-5 hover:shadow-2xl hover:-translate-y-2 duration-200 bg-green-950 rounded-xl'>
             <div className="text-2xl text-center font-bold text-white" style={{color: theme.cards.backgroundColor}} >{theme.name}</div>
             <div className="container flex justify-center">
@@ -63,10 +67,12 @@ function Tour() {
               />
             </div>
           </div>
+
+          </Link>
         ))}
       </div>
     </div>
-  )
+  );
 }
 
-export default Tour
+export default Tour;
