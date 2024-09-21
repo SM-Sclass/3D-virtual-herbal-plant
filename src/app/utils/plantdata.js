@@ -26,7 +26,7 @@ export const plants = {
   },
   giloy: {
     title: "Giloy",
-    modelUrl: "/assets/models/giloy.glb",
+    modelUrl: "/assets/models/chamomile.glb",
     description: "Giloy, also known as Tinospora cordifolia, is a climbing shrub traditionally used in Ayurveda for its wide range of medicinal benefits. Known for its bitter taste, the plant is prized for its ability to boost immunity, fight infections, and detoxify the body.",
     botanicalName: "Tinospora cordifolia",
     commonNames: ["Giloy", "Heart-leaved Moonseed"],
@@ -35,6 +35,18 @@ export const plants = {
     mostlyUsedIn: ["Ayurveda", "Homeopathy"],
     medicinalUses: "Giloy is renowned for its anti-inflammatory, antioxidant, and anti-diabetic properties. It is commonly used to treat fever, improve digestion, and enhance liver function.",
     methodsOfCultivation: "Giloy can be propagated from stem cuttings or seeds. It thrives in well-drained soil and requires moderate sunlight. Regular watering is essential, especially during dry spells.",
+    leaf: {
+      description: "Giloy leaves are heart-shaped and glossy, used in various Ayurvedic preparations.",
+      benefits: "Rich in antioxidants and used to boost immunity.",
+    },
+    stem: {
+      description: "The stem is woody and climbing, often used in medicinal preparations.",
+      benefits: "Main source of giloy's medicinal properties, used to make juice and powder.",
+    },
+    flower: {
+      description: "Small, yellowish-green flowers appear in clusters.",
+      benefits: "While not commonly used, they contribute to the plant's overall medicinal value.",
+    },
   },
   turmeric: {
     title: "Turmeric",
@@ -47,10 +59,22 @@ export const plants = {
     mostlyUsedIn: ["Ayurveda", "Homeopathy"],
     medicinalUses: "Turmeric is widely used to alleviate joint pain, improve skin health, and enhance overall wellness. It's also known for its role in supporting digestive health and reducing inflammation.",
     methodsOfCultivation: "Turmeric is grown from rhizomes planted in well-drained, fertile soil with good moisture retention. It requires partial to full sunlight and should be watered regularly to keep the soil consistently moist.",
+    leaf: {
+      description: "Large, oblong leaves with long petioles, sometimes used in cooking.",
+      benefits: "Contains antioxidants and can be used in herbal teas.",
+    },
+    stem: {
+      description: "The stem is actually a rhizome, growing underground and producing shoots.",
+      benefits: "The rhizome is the main source of turmeric's medicinal and culinary uses.",
+    },
+    flower: {
+      description: "Pale yellow flowers appear in spikes, though rarely in cultivated plants.",
+      benefits: "While not commonly used, they add ornamental value to the plant.",
+    },
   },
   amla: {
     title: "Amla",
-    modelUrl: "/assets/models/amla.glb",
+    modelUrl: "/assets/models/chamomile.glb",
     description: "Amla, or Phyllanthus emblica, is a small green fruit renowned for its high vitamin C content and potent antioxidant properties. This plant is a staple in Ayurvedic medicine, valued for its ability to promote overall health.",
     botanicalName: "Phyllanthus emblica",
     commonNames: ["Indian Gooseberry", "Amla"],
@@ -59,6 +83,18 @@ export const plants = {
     mostlyUsedIn: ["Ayurveda", "Naturopathy"],
     medicinalUses: "Amla supports the immune system, enhances skin health, and aids digestion. It is often used to prevent hair loss and promote healthy hair growth.",
     methodsOfCultivation: "Amla can be grown from seeds or grafts in well-drained soil. It prefers full sunlight and needs regular watering, especially in the initial growth stages.",
+    leaf: {
+      description: "Small, linear leaves arranged in feathery sprays.",
+      benefits: "Used in some traditional medicines for their astringent properties.",
+    },
+    stem: {
+      description: "The trunk is crooked with a relatively smooth, light gray bark.",
+      benefits: "Bark is sometimes used in traditional medicine for its astringent properties.",
+    },
+    flower: {
+      description: "Small, inconspicuous greenish-yellow flowers.",
+      benefits: "While not directly used, they develop into the nutrient-rich amla fruit.",
+    },
   },
   moringa: {
     title: "Moringa",
@@ -71,6 +107,18 @@ export const plants = {
     mostlyUsedIn: ["Ayurveda", "Naturopathy"],
     medicinalUses: "Moringa is used to combat malnutrition, support energy levels, and improve digestive health. Its anti-inflammatory properties also make it beneficial for reducing swelling and pain.",
     methodsOfCultivation: "Moringa is grown from seeds or cuttings, thriving in well-drained, sandy soil. It requires full sunlight and moderate watering, being drought-resistant once established.",
+    leaf: {
+      description: "Compound leaves with small leaflets, highly nutritious.",
+      benefits: "Rich in vitamins and minerals, used in cooking and supplements.",
+    },
+    stem: {
+      description: "Fast-growing with a soft wood, can be cut back regularly.",
+      benefits: "Young stems can be used in cooking, adding a mild flavor to dishes.",
+    },
+    flower: {
+      description: "Fragrant, cream-colored flowers in drooping panicles.",
+      benefits: "Edible and nutritious, can be used in teas or cooked as a vegetable.",
+    },
   },
   jalapeno: {
     title: "Jalapeno",
@@ -83,6 +131,18 @@ export const plants = {
     mostlyUsedIn: ["Ayurveda", "Naturopathy"],
     medicinalUses: "Jalapenos may help boost metabolism, support cardiovascular health, and provide anti-inflammatory benefits. Their high vitamin C content is also beneficial for the immune system.",
     methodsOfCultivation: "Jalapenos are grown from seeds and require warm temperatures, full sun, and well-drained soil. Regular watering is important, especially during flowering and fruiting.",
+    leaf: {
+      description: "Oval-shaped, smooth green leaves.",
+      benefits: "While not commonly used, they contain some of the plant's beneficial compounds.",
+    },
+    stem: {
+      description: "Sturdy, green stems that support the plant and peppers.",
+      benefits: "Not typically used, but crucial for the plant's growth and pepper production.",
+    },
+    flower: {
+      description: "Small, white flowers that develop into the jalapeno peppers.",
+      benefits: "Essential for pepper production, but not directly used medicinally.",
+    },
   },
   maple: {
     title: "Maple",
@@ -95,6 +155,18 @@ export const plants = {
     mostlyUsedIn: ["Naturopathy"],
     medicinalUses: "Maple syrup is rich in antioxidants and may have anti-inflammatory properties. The leaves and bark are sometimes used in traditional remedies.",
     methodsOfCultivation: "Maple trees are grown from seeds or cuttings and thrive in well-drained, fertile soil. They require full sunlight and adequate moisture, especially in dry seasons.",
+    leaf: {
+      description: "Distinctive lobed leaves, often with vibrant autumn colors.",
+      benefits: "Used in some traditional remedies for their astringent properties.",
+    },
+    stem: {
+      description: "Strong, woody trunk and branches, prized for timber.",
+      benefits: "The sap from the trunk is used to produce maple syrup, rich in minerals and antioxidants.",
+    },
+    flower: {
+      description: "Small, inconspicuous flowers appearing before or with the leaves in spring.",
+      benefits: "While not directly used medicinally, they are crucial for maple seed production.",
+    },
   },
   cannabis: {
     title: "Cannabis",
@@ -107,6 +179,18 @@ export const plants = {
     mostlyUsedIn: ["Ayurveda", "Unani"],
     medicinalUses: "Cannabis is used for pain relief, reducing anxiety, and treating chronic conditions. Its compounds, such as CBD and THC, have shown promise in medical research.",
     methodsOfCultivation: "Cannabis is grown from seeds and requires a warm climate, adequate sunlight, and well-drained soil. Careful attention to nutrient levels and watering is crucial for optimal growth.",
+    leaf: {
+      description: "Distinctive palmate leaves with serrated leaflets.",
+      benefits: "Contains cannabinoids, used in various medicinal preparations.",
+    },
+    stem: {
+      description: "Strong, fibrous stems that can grow quite tall.",
+      benefits: "Used for fiber production in some varieties (hemp).",
+    },
+    flower: {
+      description: "Clusters of small green to purple flowers, often coated with resinous trichomes.",
+      benefits: "The main source of cannabinoids, used for medicinal and recreational purposes.",
+    },
   },
   lupine: {
     title: "Lupine",
@@ -119,6 +203,18 @@ export const plants = {
     mostlyUsedIn: ["Naturopathy"],
     medicinalUses: "Lupine seeds are high in protein and fiber and can be used in various culinary applications. They are also known for their potential health benefits, including cholesterol reduction.",
     methodsOfCultivation: "Lupines are grown from seeds and prefer well-drained soil in full sun. They are drought-tolerant and require minimal maintenance once established.",
+    leaf: {
+      description: "Palmate leaves with several leaflets arranged in a circular pattern.",
+      benefits: "While not commonly used medicinally, they contribute to the plant's ornamental value.",
+    },
+    stem: {
+      description: "Erect stems that can grow quite tall, supporting the flower spikes.",
+      benefits: "Primarily structural, supporting the plant's growth and flower production.",
+    },
+    flower: {
+      description: "Tall spikes of pea-like flowers in various colors, depending on the species.",
+      benefits: "Mainly ornamental, but some species have edible seeds used for their nutritional value.",
+    },
   },
   wildGarlic: {
     title: "Wild Garlic",
@@ -131,6 +227,18 @@ export const plants = {
     mostlyUsedIn: ["Naturopathy"],
     medicinalUses: "Wild garlic is used for its antibacterial and antifungal properties. It's also believed to support heart health and improve circulation.",
     methodsOfCultivation: "Wild garlic can be propagated from bulbs or seeds. It prefers moist, shaded areas and should be watered regularly, especially in dry periods.",
+    leaf: {
+      description: "Broad, elliptical leaves with a strong garlic scent when crushed.",
+      benefits: "Rich in vitamins and minerals, used in culinary applications and herbal remedies.",
+    },
+    stem: {
+      description: "Short stems supporting the leaves and flower stalks.",
+      benefits: "While not typically used, they connect the edible leaves to the bulb.",
+    },
+    flower: {
+      description: "Clusters of small, star-shaped white flowers.",
+      benefits: "Edible and decorative, can be used as a garnish or in salads.",
+    },
   },
   bulrush: {
     title: "Bulrush",
@@ -143,6 +251,18 @@ export const plants = {
     mostlyUsedIn: ["Ayurveda"],
     medicinalUses: "Bulrush has traditionally been used to treat various ailments, including urinary issues and skin conditions, due to its anti-inflammatory properties.",
     methodsOfCultivation: "Bulrush is grown in wet, marshy conditions, usually from rhizomes or seeds. It thrives in full sun and requires consistent moisture.",
+    leaf: {
+      description: "Long, slender leaves that are often reduced to sheaths at the base of the stem.",
+      benefits: "While not commonly used medicinally, they play a crucial role in the plant's photosynthesis and overall health.",
+    },
+    stem: {
+      description: "Tall, green, cylindrical stems that can reach several feet in height.",
+      benefits: "The stems have been traditionally used for weaving baskets and mats.",
+    },
+    flower: {
+      description: "Small, brown spikelets clustered at the top of the stem.",
+      benefits: "While not used medicinally, they are important for the plant's reproduction and provide food for wildlife.",
+    },
   },
   borage: {
     title: "Borage",
@@ -155,10 +275,22 @@ export const plants = {
     mostlyUsedIn: ["Naturopathy"],
     medicinalUses: "Borage oil is rich in gamma-linolenic acid (GLA), known for its anti-inflammatory properties. It's often used to improve skin health and treat conditions like eczema.",
     methodsOfCultivation: "Borage is grown from seeds and prefers well-drained soil in full sun. It's drought-tolerant and requires minimal care once established.",
+    leaf: {
+      description: "Oval, hairy leaves with a texture similar to cucumber.",
+      benefits: "Used in salads and as a cooling herb, rich in minerals and vitamins.",
+    },
+    stem: {
+      description: "Hollow, hairy stems that can grow up to 2-3 feet tall.",
+      benefits: "While not typically used medicinally, they support the plant's growth and flower production.",
+    },
+    flower: {
+      description: "Star-shaped blue flowers, sometimes pink or white.",
+      benefits: "Edible flowers used in salads and as garnishes, also used to make borage oil.",
+    },
   },
   argentinaAnserina: {
     title: "Argentina Anserina",
-    modelUrl: "/assets/models/argentina_anserina.glb",
+    modelUrl: "/assets/models/chamomile.glb",
     description: "Argentina anserina, commonly known as Silverweed, is a perennial herb found in various habitats. It has a long history of use in traditional medicine.",
     botanicalName: "Argentina anserina",
     commonNames: ["Silverweed"],
@@ -167,10 +299,22 @@ export const plants = {
     mostlyUsedIn: ["Naturopathy"],
     medicinalUses: "Used to treat digestive issues and promote wound healing due to its astringent properties.",
     methodsOfCultivation: "Grown from seeds or divisions, Silverweed prefers moist, well-drained soil and partial shade.",
+    leaf: {
+      description: "Compound leaves with serrated leaflets, silvery-white underneath.",
+      benefits: "Used in traditional medicine for their astringent and anti-inflammatory properties.",
+    },
+    stem: {
+      description: "Creeping stems that root at nodes, forming new plants.",
+      benefits: "While not used medicinally, they help the plant spread and establish in various habitats.",
+    },
+    flower: {
+      description: "Bright yellow flowers with five petals.",
+      benefits: "While not typically used medicinally, they are important for the plant's reproduction.",
+    },
   },
   genista: {
     title: "Genista",
-    modelUrl: "/assets/models/genista.glb",
+    modelUrl: "/assets/models/chamomile.glb",
     description: "Genista is a genus of flowering plants commonly known as gorse or broom. These plants are recognized for their bright yellow flowers and potential medicinal properties.",
     botanicalName: "Genista spp.",
     commonNames: ["Broom"],
@@ -179,10 +323,22 @@ export const plants = {
     mostlyUsedIn: ["Naturopathy"],
     medicinalUses: "Traditionally used for its diuretic properties and to support urinary tract health.",
     methodsOfCultivation: "Genista can be propagated from seeds or cuttings, preferring well-drained soil and full sun exposure.",
+    leaf: {
+      description: "Small, simple leaves, often reduced to scales in some species.",
+      benefits: "While not typically used medicinally, they contribute to the plant's overall health and photosynthesis.",
+    },
+    stem: {
+      description: "Green, photosynthetic stems that are often angular or ridged.",
+      benefits: "Contain alkaloids that contribute to the plant's medicinal properties.",
+    },
+    flower: {
+      description: "Bright yellow, pea-like flowers.",
+      benefits: "Used in some traditional remedies and contain flavonoids with potential health benefits.",
+    },
   },
   gagea: {
     title: "Gagea",
-    modelUrl: "/assets/models/gagea.glb",
+    modelUrl: "/assets/models/chamomile.glb",
     description: "Gagea is a genus of flowering plants in the lily family, known for their delicate yellow flowers. They are often found in grasslands and forest edges.",
     botanicalName: "Gagea spp.",
     commonNames: ["Gagea"],
@@ -191,6 +347,18 @@ export const plants = {
     mostlyUsedIn: ["Naturopathy"],
     medicinalUses: "Used traditionally to alleviate respiratory ailments and promote overall wellness.",
     methodsOfCultivation: "Gagea can be grown from bulbs or seeds, preferring well-drained soil and partial shade.",
+    leaf: {
+      description: "Narrow, grass-like leaves that emerge from the base of the plant.",
+      benefits: "While not commonly used medicinally, they are crucial for the plant's growth and energy production.",
+    },
+    stem: {
+      description: "Short, slender stems that support the flowers.",
+      benefits: "Primarily structural, supporting the plant's reproductive organs.",
+    },
+    flower: {
+      description: "Small, star-shaped yellow flowers.",
+      benefits: "While not typically used medicinally, they are important for the plant's reproduction and add aesthetic value.",
+    },
   },
   nettle: {
     title: "Nettle",
@@ -203,6 +371,18 @@ export const plants = {
     mostlyUsedIn: ["Ayurveda", "Naturopathy"],
     medicinalUses: "Nettle is rich in vitamins and minerals. It's often used to support joint health, alleviate allergies, and improve skin conditions.",
     methodsOfCultivation: "Nettle can be grown from seeds or divisions, preferring rich, moist soil and partial shade. Regular watering is essential for optimal growth.",
+    leaf: {
+      description: "Dark green, heart-shaped leaves with serrated edges and stinging hairs.",
+      benefits: "Rich in nutrients, used in teas, soups, and as a spinach substitute when cooked.",
+    },
+    stem: {
+      description: "Erect, square stems covered in stinging hairs.",
+      benefits: "The fibers from the stem can be used to make textiles.",
+    },
+    flower: {
+      description: "Small, greenish or brownish flowers in drooping clusters.",
+      benefits: "While not commonly used, they contribute to the plant's overall nutritional profile.",
+    },
   },
   blackberry: {
     title: "Blackberry",
@@ -215,6 +395,18 @@ export const plants = {
     mostlyUsedIn: ["Naturopathy"],
     medicinalUses: "Rich in vitamins, antioxidants, and dietary fiber, blackberries support heart health and digestion.",
     methodsOfCultivation: "Blackberries are grown from seeds or cuttings and prefer well-drained soil with full sun. They require regular pruning to promote healthy growth and fruit production.",
+    leaf: {
+      description: "Compound leaves with 3-5 oval leaflets, toothed edges.",
+      benefits: "Used in teas for their astringent properties, may help with digestive issues.",
+    },
+    stem: {
+      description: "Thorny canes that can grow several feet long.",
+      benefits: "While not used medicinally, they support the plant's growth and berry production.",
+    },
+    flower: {
+      description: "White or pink flowers with five petals.",
+      benefits: "While not typically used medicinally, they are crucial for berry production and attract pollinators.",
+    },
   },
   daisies: {
     title: "Daisies",
@@ -227,10 +419,22 @@ export const plants = {
     mostlyUsedIn: ["Homeopathy"],
     medicinalUses: "Daisies are used for their anti-inflammatory properties and can be applied topically to soothe skin irritations.",
     methodsOfCultivation: "Daisies are grown from seeds and prefer well-drained soil and full sun. They require moderate watering, especially during dry periods.",
+    leaf: {
+      description: "Spoon-shaped leaves forming a basal rosette.",
+      benefits: "Used in some traditional remedies for their mild astringent properties.",
+    },
+    stem: {
+      description: "Short, leafless stems supporting individual flower heads.",
+      benefits: "While not used medicinally, they support the flowers which are the main medicinal part.",
+    },
+    flower: {
+      description: "White petals surrounding a yellow center disc.",
+      benefits: "Used in herbal teas and topical preparations for their anti-inflammatory properties.",
+    },
   },
   dock: {
     title: "Dock",
-    modelUrl: "/assets/models/dock.glb",
+    modelUrl: "/assets/models/chamomile.glb",
     description: "Dock (Rumex spp.) is a perennial plant characterized by its large leaves and potential health benefits. It is commonly found in damp areas.",
     botanicalName: "Rumex spp.",
     commonNames: ["Dock Leaf"],
@@ -239,10 +443,22 @@ export const plants = {
     mostlyUsedIn: ["Ayurveda"],
     medicinalUses: "Dock is known for its astringent properties and is traditionally used to treat digestive issues and skin irritations.",
     methodsOfCultivation: "Dock can be grown from seeds or divisions, preferring moist, rich soil and partial shade.",
+    leaf: {
+      description: "Large, elongated leaves, often with wavy or curled edges.",
+      benefits: "Used topically to soothe skin irritations, particularly nettle stings.",
+    },
+    stem: {
+      description: "Tall, ridged stems that can grow several feet high.",
+      benefits: "While not typically used medicinally, they support the plant's growth and seed production.",
+    },
+    flower: {
+      description: "Small, greenish flowers arranged in whorls on tall spikes.",
+      benefits: "While not used medicinally, they are important for the plant's reproduction.",
+    },
   },
   brookmint: {
     title: "Brookmint",
-    modelUrl: "/assets/models/brookmint.glb",
+    modelUrl: "/assets/models/chamomile.glb",
     description: "Brookmint (Mentha aquatica) is a herbaceous plant known for its aromatic leaves. It grows near water bodies and has culinary and medicinal uses.",
     botanicalName: "Mentha aquatica",
     commonNames: ["Water Mint"],
@@ -251,10 +467,22 @@ export const plants = {
     mostlyUsedIn: ["Naturopathy"],
     medicinalUses: "Brookmint is used for digestive issues and has soothing properties for stomach ailments.",
     methodsOfCultivation: "Brookmint is grown from cuttings or seeds and prefers moist conditions with partial shade.",
+    leaf: {
+      description: "Oval to lance-shaped leaves with serrated edges, aromatic when crushed.",
+      benefits: "Used in teas and aromatherapy for their soothing and digestive properties.",
+    },
+    stem: {
+      description: "Square stems, often reddish in color.",
+      benefits: "While not typically used medicinally, they support the leaves which contain the plant's essential oils.",
+    },
+    flower: {
+      description: "Small, lilac to pink flowers in dense, rounded clusters.",
+      benefits: "While not commonly used medicinally, they attract pollinators and contribute to the plant's overall aroma.",
+    },
   },
   valerian: {
     title: "Valerian",
-    modelUrl: "/assets/models/valerian.glb",
+    modelUrl: "/assets/models/chamomile.glb",
     description: "Valerian (Valeriana officinalis) is a flowering plant known for its calming effects. It's often used as a natural remedy for anxiety and sleep disorders.",
     botanicalName: "Valeriana officinalis",
     commonNames: ["Valerian Root"],
@@ -263,10 +491,23 @@ export const plants = {
     mostlyUsedIn: ["Naturopathy"],
     medicinalUses: "Valerian is used to promote relaxation, alleviate insomnia, and reduce anxiety. It's often consumed as a tea or in supplement form.",
     methodsOfCultivation: "Valerian can be grown from seeds or root divisions in rich, moist soil. It prefers partial shade and requires regular watering.",
+    leaf: {
+      description: "Valerian leaves are compound with serrated leaflets.",
+      benefits: "While not commonly used medicinally, they contribute to the plant's overall growth.",
+    },
+    stem: {
+      description: "The stem is tall and upright, supporting the flower clusters.",
+      benefits: "Primarily structural, supporting the plant's growth and flower production.",
+    },
+    flower: {
+      description: "Small, sweet-scented pink or white flowers in clusters.",
+      benefits: "While not the primary medicinal part, they contribute to the plant's aromatic properties.",
+    },
   },
+
   groundsel: {
     title: "Groundsel",
-    modelUrl: "/assets/models/groundsel.glb",
+    modelUrl: "/assets/models/chamomile.glb",
     description: "Groundsel (Senecio vulgaris) is a flowering plant known for its fast growth and adaptability. It is often found in disturbed areas.",
     botanicalName: "Senecio vulgaris",
     commonNames: ["Groundsel"],
@@ -275,10 +516,23 @@ export const plants = {
     mostlyUsedIn: ["Homeopathy"],
     medicinalUses: "Traditionally used for various ailments, including digestive issues and respiratory conditions.",
     methodsOfCultivation: "Groundsel is grown from seeds and thrives in well-drained soil. It is drought-tolerant and requires minimal care once established.",
+    leaf: {
+      description: "Deeply lobed leaves, often with a toothed margin.",
+      benefits: "Used in some traditional remedies, but caution is advised due to potential toxicity.",
+    },
+    stem: {
+      description: "Erect, often branching stems that can grow up to 40cm tall.",
+      benefits: "While not used medicinally, they support the plant's rapid growth and spread.",
+    },
+    flower: {
+      description: "Small, yellow daisy-like flower heads.",
+      benefits: "Not typically used medicinally, but important for the plant's reproduction and identification.",
+    },
   },
+
   raspberry: {
     title: "Raspberry",
-    modelUrl: "/assets/models/raspberry.glb",
+    modelUrl: "/assets/models/chamomile.glb",
     description: "Raspberry (Rubus idaeus) is a thorny shrub valued for its sweet, red fruit. It is widely cultivated for culinary purposes and has several health benefits.",
     botanicalName: "Rubus idaeus",
     commonNames: ["Raspberry"],
@@ -287,10 +541,23 @@ export const plants = {
     mostlyUsedIn: ["Naturopathy"],
     medicinalUses: "Raspberries are rich in antioxidants and vitamins, supporting immune function and heart health.",
     methodsOfCultivation: "Raspberries are grown from seeds or cuttings and prefer well-drained soil with full sun. They require regular pruning and watering.",
+    leaf: {
+      description: "Compound leaves with 3-5 oval leaflets, green on top and silvery underneath.",
+      benefits: "Raspberry leaves are often used to make tea, particularly for women's health.",
+    },
+    stem: {
+      description: "Woody canes with small prickles.",
+      benefits: "While not used medicinally, they support the plant's growth and fruit production.",
+    },
+    flower: {
+      description: "Small, white to pink flowers with five petals.",
+      benefits: "While not used medicinally, they are crucial for berry production.",
+    },
   },
+
   coltsfoot: {
     title: "Coltsfoot",
-    modelUrl: "/assets/models/coltsfoot.glb",
+    modelUrl: "/assets/models/chamomile.glb",
     description: "Coltsfoot (Tussilago farfara) is a perennial herb known for its yellow flowers and broad leaves. It has a long history of use in herbal medicine.",
     botanicalName: "Tussilago farfara",
     commonNames: ["Coltsfoot"],
@@ -299,6 +566,18 @@ export const plants = {
     mostlyUsedIn: ["Homeopathy"],
     medicinalUses: "Coltsfoot is traditionally used to relieve coughs and respiratory issues due to its soothing properties.",
     methodsOfCultivation: "Coltsfoot can be grown from seeds and prefers moist, rich soil. It thrives in partial to full sunlight and requires regular watering.",
+    leaf: {
+      description: "Large, hoof-shaped leaves that appear after the flowers.",
+      benefits: "Used in herbal preparations for respiratory conditions.",
+    },
+    stem: {
+      description: "Scaly stems that bear single flower heads.",
+      benefits: "While not used medicinally, they support the flowers which are the main medicinal part.",
+    },
+    flower: {
+      description: "Bright yellow, dandelion-like flowers that appear in early spring.",
+      benefits: "Used in herbal teas and preparations for respiratory health.",
+    },
   },
   maizecorn: {
     title: "Maizecorn",
@@ -311,7 +590,20 @@ export const plants = {
     mostlyUsedIn: ["Naturopathy"],
     medicinalUses: "Corn is rich in vitamins and fiber, promoting digestive health and providing energy.",
     methodsOfCultivation: "Maizecorn is grown from seeds in well-drained soil with full sun. Regular watering and pest management are essential for successful cultivation.",
+    leaf: {
+      description: "Long, narrow leaves with parallel veins.",
+      benefits: "While not typically used medicinally, they are crucial for the plant's photosynthesis and growth.",
+    },
+    stem: {
+      description: "Tall, sturdy stem with nodes and internodes.",
+      benefits: "The stem provides structural support and channels nutrients to the developing ears of corn.",
+    },
+    flower: {
+      description: "Separate male (tassel) and female (silk) flowers on the same plant.",
+      benefits: "The ear of corn develops from the female flowers, providing the edible and nutritious kernels.",
+    },
   },
+
   aloevera: {
     title: "Aloe Vera",
     modelUrl: "/assets/models/aloevera.glb",
@@ -323,7 +615,20 @@ export const plants = {
     mostlyUsedIn: ["Ayurveda", "Naturopathy"],
     medicinalUses: "Aloe Vera is known for its skin-soothing properties, treating burns, and promoting wound healing. It is also consumed for digestive health.",
     methodsOfCultivation: "Aloe Vera is grown from offsets or seeds in well-drained soil with full sun. It requires minimal watering and is drought-resistant.",
+    leaf: {
+      description: "Thick, fleshy leaves with serrated edges.",
+      benefits: "The gel inside the leaves is used for its soothing and healing properties on skin.",
+    },
+    stem: {
+      description: "Short stem, often not visible as leaves grow in a rosette pattern.",
+      benefits: "While not used medicinally, it supports the growth of the medicinal leaves.",
+    },
+    flower: {
+      description: "Tubular yellow or orange flowers on a tall spike.",
+      benefits: "While not commonly used medicinally, they contribute to the plant's overall health.",
+    },
   },
+
   jadePlant: {
     title: "Jade Plant",
     modelUrl: "/assets/models/jade_plant.glb",
@@ -335,7 +640,20 @@ export const plants = {
     mostlyUsedIn: ["Naturopathy"],
     medicinalUses: "While primarily grown as an ornamental plant, its leaves have been used in traditional remedies for skin irritations.",
     methodsOfCultivation: "Jade plants are grown from leaves or stem cuttings, thriving in well-drained soil with bright sunlight. They require minimal watering.",
+    leaf: {
+      description: "Thick, oval-shaped, fleshy leaves with a smooth, waxy texture.",
+      benefits: "In traditional medicine, leaves are sometimes used topically for minor skin irritations.",
+    },
+    stem: {
+      description: "Thick, woody stems that become tree-like with age.",
+      benefits: "While not used medicinally, they support the growth of the leaves and overall plant structure.",
+    },
+    flower: {
+      description: "Small, star-shaped pink or white flowers in clusters.",
+      benefits: "Not typically used medicinally, but contribute to the plant's ornamental value.",
+    },
   },
+
   maleFern: {
     title: "Male Fern",
     modelUrl: "/assets/models/male_fern.glb",
@@ -347,11 +665,23 @@ export const plants = {
     mostlyUsedIn: ["Naturopathy"],
     medicinalUses: "Traditionally used for its potential to expel intestinal worms and treat various skin conditions.",
     methodsOfCultivation: "Male Fern can be propagated by spores or divisions, preferring rich, moist soil in partial to full shade.",
+    leaf: {
+      description: "Large, feathery fronds with pinnate leaflets.",
+      benefits: "The fronds contain compounds that have been traditionally used for their anthelmintic properties.",
+    },
+    stem: {
+      description: "Short, thick rhizome covered in brown scales.",
+      benefits: "The rhizome is the main part used medicinally, containing most of the plant's active compounds.",
+    },
+    flower: {
+      description: "As a fern, it doesn't produce flowers but reproduces via spores.",
+      benefits: "The spores, found on the underside of fronds, are not typically used medicinally.",
+    },
   },
   
   neem: {
     title: "Neem",
-    modelUrl: "/assets/models/neem.glb",
+    modelUrl: "/assets/models/chamomile.glb",
     description: "Neem (Azadirachta indica) is a fast-growing tree known for its medicinal properties. Every part of the tree is utilized in traditional medicine.",
     botanicalName: "Azadirachta indica",
     commonNames: ["Neem", "Indian Lilac"],
@@ -360,5 +690,20 @@ export const plants = {
     mostlyUsedIn: ["Ayurveda", "Unani"],
     medicinalUses: "Neem is used for its antibacterial, antifungal, and antiviral properties. It's commonly applied in skin treatments and dental care.",
     methodsOfCultivation: "Neem can be grown from seeds or cuttings in well-drained soil. It prefers full sun and is drought-resistant once established.",
+    leaf: {
+      description: "Compound leaves with serrated leaflets.",
+      benefits: "Neem leaves are used in various medicinal preparations for their antimicrobial and anti-inflammatory properties.",
+    },
+    stem: {
+      description: "The bark is rough and dark brown.",
+      benefits: "Neem bark is used in traditional medicine for its astringent and antimicrobial properties.",
+    },
+    flower: {
+      description: "Small, white, fragrant flowers in drooping panicles.",
+      benefits: "While not commonly used medicinally, neem flowers are sometimes used in culinary applications.",
+    },
   },
+
+  // ... (you can continue with more plants as needed)
 };
+
