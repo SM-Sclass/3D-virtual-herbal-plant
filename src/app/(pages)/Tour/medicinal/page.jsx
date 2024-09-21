@@ -3,7 +3,6 @@ import medicinal from '../../../utils/medicinal'
 import PlantCard from '../../../component/Plantcard'
 
 function page() {
-  console.log(medicinal[1])
   return (
     <div className="bg-white h-full rounded-md flex flex-col items-center">
       <h1 className="text-3xl md:text-4xl font-bold mt-6 mb-4 text-green-900">Medicinal Plant</h1>
