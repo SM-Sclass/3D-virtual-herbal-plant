@@ -11,9 +11,12 @@ export const BookmarkProvider = ({ children }) => {
       setBookmarks([...bookmarks, plant]); // Add plant if not already bookmarked
     }
   };
+  const removeBookmark = (plant) => {
+    setBookmarks((prev) => prev.filter((item) => item !== plant)); // Remove plant
+  };
 
   return (
-    <BookmarkContext.Provider value={{ bookmarks, addBookmark }}>
+    <BookmarkContext.Provider value={{ bookmarks, addBookmark,removeBookmark }}>
       {children}
     </BookmarkContext.Provider>
   );
