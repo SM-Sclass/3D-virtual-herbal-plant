@@ -11,6 +11,13 @@ const PlantDetails = () => {
   const [plantData, setPlantData] = useState(null); // State for plant data
   const [isFullView, setIsFullView] = useState(false); // State for full view
 
+  const modelUrls = {
+    giloy: '/assets/models/chamomile.glb',
+    turmeric: '/assets/models/turmeric.glb',
+    amla: '/assets/models/amla.glb',
+    moringa: '/assets/models/moringa.glb',
+  };
+
   useEffect(() => {
     if (allplants) {
       const plant = plants[allplants.toLowerCase()];
