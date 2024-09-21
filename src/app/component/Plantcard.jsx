@@ -31,7 +31,7 @@ function PlantCard({ plant }) {
     <div className="relative">
       <Link href={`/plants/${lowertitle}`} className="cursor-pointer">
         {/* Hover effect applied to the entire card */}
-        <div className="bg-green-500 hover:bg-green-700 hover:shadow-2xl hover:-translate-y-1 duration-200 rounded-2xl relative w-full flex flex-col items-center justify-center">
+        <div className="bg-green-700 hover:bg-green-800 hover:shadow-2xl hover:-translate-y-1 duration-200 rounded-2xl relative w-full flex flex-col items-center justify-center">
           {/* Image container */}
           <div className="relative w-full h-64">
             <Image
