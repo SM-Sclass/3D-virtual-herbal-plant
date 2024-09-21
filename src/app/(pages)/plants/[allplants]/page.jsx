@@ -1,6 +1,8 @@
 "use client";
 import { useParams } from 'next/navigation';
+
 import React, { useEffect, useState, Suspense, useMemo } from 'react';
+
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, useGLTF } from '@react-three/drei';
 import { Dialog } from '@headlessui/react';
@@ -30,13 +32,15 @@ const PlantDetails = () => {
     setIsFullView(false);
     setModelVisible(true);
   };
+
   const modelUrl = useMemo(() => (plantData ? plantData.modelUrl : null), [plantData]);
 
 
   if (loading) return <LoadingAnimation />;
 
   return (
-    <div className="flex flex-col md:flex-row lg:flex-row h-screen bg-[rgb(100, 200, 100)]"> {/* Updated to lighter green */}
+    <div className="flex flex-col md:flex-row lg:flex-row h-screen bg-[rgb(100, 200, 100)]">
+    <div className="flex flex-col md:flex-row h-screen bg-[rgb(100, 200, 100)]">
       {/* Left section: Model */}
       <div className="md:w-1/3 p-5 relative flex flex-col items-center justify-center border-r-4 border-yellow-500">
         {modelVisible && (
@@ -124,14 +128,15 @@ const PlantDetails = () => {
         <ambientLight />
         <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
         <Suspense fallback={null}>
-          {modelUrl ? <Model url={plantData.modelUrl} scale={3} /> : <LoadingAnimation/>} {/* Adjust scale if needed */}
-        </Suspense>
+                    {modelUrl ? <Model url={plantData.modelUrl} scale={3} /> : <LoadingAnimation/>} {/* Adjust scale if needed */}
+=======        </Suspense>
         <OrbitControls enableZoom={true} />
       </Canvas>
     </div>
   </Dialog>
 )}
 
+    </div>
     </div>
   );
 };

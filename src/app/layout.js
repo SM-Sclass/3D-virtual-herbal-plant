@@ -36,6 +36,7 @@ export default function RootLayout({ children }) {
           <div className="h-32 bg-green-700"></div>
           {children}
         </BookmarkProvider>
+
       </body>
     </html>
   );

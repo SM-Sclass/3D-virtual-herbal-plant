@@ -3,6 +3,7 @@ export const plants = {
   giloy: {
     title: "Giloy",
     modelUrl: "/assets/models/giloy.glb",
+
     description: "Giloy, also known as Tinospora cordifolia, is a climbing shrub traditionally used in Ayurveda for its wide range of medicinal benefits. Known for its bitter taste, the plant is prized for its ability to boost immunity, fight infections, and detoxify the body.",
     botanicalName: "Tinospora cordifolia",
     commonNames: ["Giloy", "Heart-leaved Moonseed"],
@@ -327,14 +328,35 @@ export const plants = {
   chamomile: {
     title: "Chamomile",
     modelUrl: "/assets/models/chamomile.glb",
+<<<<<<< HEAD
     description: "Chamomile (Matricaria chamomilla) is a fragrant herb known for its calming properties. It's commonly used in teas and herbal remedies.",
+=======
+    description: "Chamomile (Matricaria chamomilla) is a fragrant herb known for its calming properties.",
+>>>>>>> 13c94f567bc987e92c1147122801af05b85ca282
     botanicalName: "Matricaria chamomilla",
     commonNames: ["Chamomile"],
     habitat: "Cultivated in gardens and fields, prefers sunny areas.",
     theme: "Medicinal",
     mostlyUsedIn: ["Naturopathy"],
+<<<<<<< HEAD
     medicinalUses: "Chamomile is known for its ability to promote relaxation, alleviate digestive issues, and improve sleep quality.",
     methodsOfCultivation: "Chamomile can be grown from seeds in well-drained soil and requires full sun. It needs moderate watering, especially during dry spells.",
+=======
+    medicinalUses: "Chamomile promotes relaxation, alleviates digestive issues, and improves sleep quality.",
+    methodsOfCultivation: "Grown from seeds in well-drained soil and requires full sun.",
+    leaf: {
+      description: "Chamomile leaves are feathery and aromatic, used in teas and remedies.",
+      benefits: "Help in digestion and can be used in herbal infusions.",
+    },
+    stem: {
+      description: "The stem is erect and has a few branches, often used for making extracts.",
+      benefits: "Can be used to prepare soothing teas and oils.",
+    },
+    flower: {
+      description: "The flower heads are daisy-like and are the main part used in herbal medicine.",
+      benefits: "Known for their calming effects and ability to help with sleep disorders.",
+    },
+>>>>>>> 13c94f567bc987e92c1147122801af05b85ca282
   },
   neem: {
     title: "Neem",
