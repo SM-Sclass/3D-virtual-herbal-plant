@@ -37,7 +37,7 @@ const PlantDetails = () => {
   if (loading) return <LoadingAnimation />;
 
   return (
-    <div className="flex flex-col md:flex-row lg:flex-row h-screen bg-green-700">
+    <div className="flex flex-col md:flex-row lg:flex-row h-screen bg-yellow-100">
     <div className="flex flex-col md:flex-row h-screen bg-green-700">
       {/* Left section: Model */}
       <div className="md:w-1/3 p-5 relative flex flex-col items-center justify-center border-r-4 border-yellow-500">
