@@ -26,7 +26,7 @@ export const plants = {
   },
   giloy: {
     title: "Giloy",
-    modelUrl: "/assets/models/giloy.glb",
+    modelUrl: "/assets/models/chamomile.glb",
     description: "Giloy, also known as Tinospora cordifolia, is a climbing shrub traditionally used in Ayurveda for its wide range of medicinal benefits. Known for its bitter taste, the plant is prized for its ability to boost immunity, fight infections, and detoxify the body.",
     botanicalName: "Tinospora cordifolia",
     commonNames: ["Giloy", "Heart-leaved Moonseed"],
@@ -74,7 +74,7 @@ export const plants = {
   },
   amla: {
     title: "Amla",
-    modelUrl: "/assets/models/amla.glb",
+    modelUrl: "/assets/models/chamomile.glb",
     description: "Amla, or Phyllanthus emblica, is a small green fruit renowned for its high vitamin C content and potent antioxidant properties. This plant is a staple in Ayurvedic medicine, valued for its ability to promote overall health.",
     botanicalName: "Phyllanthus emblica",
     commonNames: ["Indian Gooseberry", "Amla"],
@@ -290,7 +290,7 @@ export const plants = {
   },
   argentinaAnserina: {
     title: "Argentina Anserina",
-    modelUrl: "/assets/models/argentina_anserina.glb",
+    modelUrl: "/assets/models/chamomile.glb",
     description: "Argentina anserina, commonly known as Silverweed, is a perennial herb found in various habitats. It has a long history of use in traditional medicine.",
     botanicalName: "Argentina anserina",
     commonNames: ["Silverweed"],
@@ -314,7 +314,7 @@ export const plants = {
   },
   genista: {
     title: "Genista",
-    modelUrl: "/assets/models/genista.glb",
+    modelUrl: "/assets/models/chamomile.glb",
     description: "Genista is a genus of flowering plants commonly known as gorse or broom. These plants are recognized for their bright yellow flowers and potential medicinal properties.",
     botanicalName: "Genista spp.",
     commonNames: ["Broom"],
@@ -338,7 +338,7 @@ export const plants = {
   },
   gagea: {
     title: "Gagea",
-    modelUrl: "/assets/models/gagea.glb",
+    modelUrl: "/assets/models/chamomile.glb",
     description: "Gagea is a genus of flowering plants in the lily family, known for their delicate yellow flowers. They are often found in grasslands and forest edges.",
     botanicalName: "Gagea spp.",
     commonNames: ["Gagea"],
@@ -434,7 +434,7 @@ export const plants = {
   },
   dock: {
     title: "Dock",
-    modelUrl: "/assets/models/dock.glb",
+    modelUrl: "/assets/models/chamomile.glb",
     description: "Dock (Rumex spp.) is a perennial plant characterized by its large leaves and potential health benefits. It is commonly found in damp areas.",
     botanicalName: "Rumex spp.",
     commonNames: ["Dock Leaf"],
@@ -458,7 +458,7 @@ export const plants = {
   },
   brookmint: {
     title: "Brookmint",
-    modelUrl: "/assets/models/brookmint.glb",
+    modelUrl: "/assets/models/chamomile.glb",
     description: "Brookmint (Mentha aquatica) is a herbaceous plant known for its aromatic leaves. It grows near water bodies and has culinary and medicinal uses.",
     botanicalName: "Mentha aquatica",
     commonNames: ["Water Mint"],
@@ -482,7 +482,7 @@ export const plants = {
   },
   valerian: {
     title: "Valerian",
-    modelUrl: "/assets/models/valerian.glb",
+    modelUrl: "/assets/models/chamomile.glb",
     description: "Valerian (Valeriana officinalis) is a flowering plant known for its calming effects. It's often used as a natural remedy for anxiety and sleep disorders.",
     botanicalName: "Valeriana officinalis",
     commonNames: ["Valerian Root"],
@@ -507,7 +507,7 @@ export const plants = {
 
   groundsel: {
     title: "Groundsel",
-    modelUrl: "/assets/models/groundsel.glb",
+    modelUrl: "/assets/models/chamomile.glb",
     description: "Groundsel (Senecio vulgaris) is a flowering plant known for its fast growth and adaptability. It is often found in disturbed areas.",
     botanicalName: "Senecio vulgaris",
     commonNames: ["Groundsel"],
@@ -532,7 +532,7 @@ export const plants = {
 
   raspberry: {
     title: "Raspberry",
-    modelUrl: "/assets/models/raspberry.glb",
+    modelUrl: "/assets/models/chamomile.glb",
     description: "Raspberry (Rubus idaeus) is a thorny shrub valued for its sweet, red fruit. It is widely cultivated for culinary purposes and has several health benefits.",
     botanicalName: "Rubus idaeus",
     commonNames: ["Raspberry"],
@@ -557,7 +557,7 @@ export const plants = {
 
   coltsfoot: {
     title: "Coltsfoot",
-    modelUrl: "/assets/models/coltsfoot.glb",
+    modelUrl: "/assets/models/chamomile.glb",
     description: "Coltsfoot (Tussilago farfara) is a perennial herb known for its yellow flowers and broad leaves. It has a long history of use in herbal medicine.",
     botanicalName: "Tussilago farfara",
     commonNames: ["Coltsfoot"],
@@ -681,7 +681,7 @@ export const plants = {
   
   neem: {
     title: "Neem",
-    modelUrl: "/assets/models/neem.glb",
+    modelUrl: "/assets/models/chamomile.glb",
     description: "Neem (Azadirachta indica) is a fast-growing tree known for its medicinal properties. Every part of the tree is utilized in traditional medicine.",
     botanicalName: "Azadirachta indica",
     commonNames: ["Neem", "Indian Lilac"],
