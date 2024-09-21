@@ -1,20 +1,33 @@
-import React from 'react'
-import Image from 'next/image'
+"use client"
+import React, { useContext } from 'react';
+import Link from 'next/link';
+import { BookmarkContext } from '../contextapi/BookmarkContext'; // Import your bookmark context
 
-function Plantcard({ image, title, details }) {
+function PlantCard({ plant }) {
+  const title = plant[0];
+  const lowertitle = title.toLowerCase();
+  const { bookmarks, addBookmark } = useContext(BookmarkContext); // Access context
+
+  const handleBookmark = () => {
+    addBookmark(lowertitle); // Add the plant title to bookmarks
+  };
+
   return (
-    <div className='bg-green-950 p-10 pt-24 rounded-md relative w-full'>
-      <Image
-        src={image}
-        alt={title}
-        width={224} // width for w-56 (56 * 4)
-        height={224}
-        className='w-56 absolute -top-5 left-1/2 transform -translate-x-1/2 -translate-y-1/2 duration-500'
-      />
-      <h3 className='text-white text-xl font-bold mt-10'>{title}</h3>
-      <p className='text-gray-300 mt-2'>{details}</p>
+    <div className='relative'>
+      <Link href={`/plants/${lowertitle}`} className='hover:shadow-2xl hover:-translate-y-1 duration-200 cursor-pointer'>
+        <div className="bg-green-700 p-20 h-80 rounded-2xl relative w-full flex items-start justify-center">
+          <h3 className="text-white text-xl font-bold">{title}</h3>
+        </div>
+      </Link>
+      <button 
+        onClick={handleBookmark} 
+        className='absolute top-2 right-2 bg-yellow-500 text-white p-2 rounded hover:bg-yellow-600 transition duration-200'
+        aria-label="Bookmark Plant"
+      >
+        Bookmark
+      </button>
     </div>
-  )
+  );
 }
 
-export default Plantcard
+export default PlantCard;

@@ -1,0 +1,20 @@
+"use client"
+import React, { createContext, useState } from 'react';
+
+export const BookmarkContext = createContext();
+
+export const BookmarkProvider = ({ children }) => {
+  const [bookmarks, setBookmarks] = useState([]);
+
+  const addBookmark = (plant) => {
+    if (!bookmarks.includes(plant)) {
+      setBookmarks([...bookmarks, plant]); // Add plant if not already bookmarked
+    }
+  };
+
+  return (
+    <BookmarkContext.Provider value={{ bookmarks, addBookmark }}>
+      {children}
+    </BookmarkContext.Provider>
+  );
+};
