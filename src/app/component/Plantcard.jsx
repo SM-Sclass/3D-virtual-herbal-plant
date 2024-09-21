@@ -25,20 +25,27 @@ function PlantCard({ plant }) {
     setBookmark(!bookmarked);
   };
 
-  const imagePath = `/img/explore/${lowertitle}.png`; // Construct the image path
+  const imagePath = `/assets/img/explore/${lowertitle}.png`;
 
   return (
     <div className='relative'>
-      <Link href={`/plants/${lowertitle}`} className='hover:shadow-2xl hover:-translate-y-1 duration-200 cursor-pointer'>
-        <div className="bg-green-700 hover:bg-green-900 p-20 h-80 rounded-2xl relative w-full flex items-start justify-center">
-          <Image 
-            src={imagePath} 
-            alt={title} 
-            layout="fill" // Use layout fill to cover the parent div
-            objectFit="cover" // Adjust the image to cover the container
-            className="rounded-2xl" // Optional: round the corners of the image
-          />
-          <h3 className="text-white text-xl font-bold z-10">{title}</h3> {/* Add z-index to show title above image */}
+      <Link href={`/plants/${lowertitle}`} className='cursor-pointer'>
+        {/* Apply hover effect on the entire card */}
+        <div className="bg-green-500 hover:bg-green-700 hover:shadow-2xl hover:-translate-y-1 duration-200 rounded-2xl relative w-full flex flex-col items-center justify-center">
+          {/* Image container */}
+          <div className="relative w-full h-64">
+            <Image 
+              src={imagePath} 
+              alt={title} 
+              layout="fill" // Use layout fill to cover the parent div
+              objectFit="cover" // Adjust the image to cover the container
+              className="rounded-t-2xl" // Rounded top corners of the image
+            />
+          </div>
+          {/* Title below the image */}
+          <div className="bg-green-500 w-full py-4 rounded-b-2xl flex items-center justify-center">
+            <h3 className="text-white text-xl font-bold">{title}</h3>
+          </div>
         </div>
       </Link>
       <span className='absolute top-2 right-2 bg-yellow-500 text-white p-2 rounded hover:bg-yellow-600 transition duration-200' onClick={handleBookmark}>
