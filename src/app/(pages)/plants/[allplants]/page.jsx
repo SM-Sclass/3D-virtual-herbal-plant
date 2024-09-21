@@ -1,6 +1,6 @@
-"use client"
+"use client";
 import { useParams } from 'next/navigation';
-import Feact, { useEffect, useState, Suspense, useMemo } from 'react';
+import React, { useEffect, useState, Suspense } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, useGLTF } from '@react-three/drei';
 import { Dialog } from '@headlessui/react';
@@ -10,13 +10,6 @@ const PlantDetails = () => {
   const { allplants } = useParams(); // Get the dynamic segment (plant name)
   const [plantData, setPlantData] = useState(null); // State for plant data
   const [isFullView, setIsFullView] = useState(false); // State for full view
-
-  const modelUrls = {
-    giloy: '/assets/models/chamomile.glb',
-    turmeric: '/assets/models/turmeric.glb',
-    amla: '/assets/models/amla.glb',
-    moringa: '/assets/models/moringa.glb',
-  };
 
   useEffect(() => {
     if (allplants) {
@@ -42,7 +35,7 @@ const PlantDetails = () => {
           <ambientLight />
           <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
           <Suspense fallback={null}>
-            <MemoizedModel url={plantData.modelUrl} scale={4} /> {/* Use memoized model */}
+            <Model url={plantData.modelUrl} scale={4} /> {/* Use the Model component */}
           </Suspense>
           <OrbitControls enableZoom={true} />
         </Canvas>
@@ -63,7 +56,6 @@ const PlantDetails = () => {
         <p className="mt-6 text-lg leading-relaxed">
           {plantData.description} {/* Use description from plantData */}
         </p>
-        {/* Add more detailed info here */}
       </div>
 
       {/* Full View Modal */}
@@ -86,7 +78,7 @@ const PlantDetails = () => {
               <ambientLight />
               <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
               <Suspense fallback={null}>
-                <MemoizedModel url={plantData.modelUrl} scale={5} /> {/* Use memoized model */}
+                <Model url={plantData.modelUrl} scale={5} /> {/* Use the Model component */}
               </Suspense>
               <OrbitControls enableZoom={true} />
             </Canvas>
@@ -97,10 +89,10 @@ const PlantDetails = () => {
   );
 };
 
-// Memoized Model component to load GLTF models and control the scale
-const MemoizedModel = ({ url, scale = 1 }) => {
-  const scene = useMemo(() => {
-    const { scene } = useGLTF(url);
-    return scene;
-  }, [url]);}
+// Model component to load GLTF models and control the scale
+const Model = ({ url, scale = 1 }) => {
+  const { scene } = useGLTF(url);
+  return <primitive object={scene} scale={[scale, scale, scale]} />;
+};
+
 export default PlantDetails;
