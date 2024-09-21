@@ -14,7 +14,7 @@ export const plants = {
   },
   turmeric: {
     title: "Turmeric",
-    modelUrl: "/assets/models/turmeric.glb",
+    modelUrl: "/assets/models/chamomile.glb",
     description: "Turmeric (Curcuma longa) is a vibrant yellow rhizome known for its culinary and medicinal uses. It contains curcumin, a potent compound that contributes to its anti-inflammatory and antioxidant properties.",
     botanicalName: "Curcuma longa",
     commonNames: ["Turmeric", "Curcumin"],
@@ -26,7 +26,7 @@ export const plants = {
   },
   amla: {
     title: "Amla",
-    modelUrl: "/assets/models/amla.glb",
+    modelUrl: "/assets/models/chamomile.glb",
     description: "Amla, or Phyllanthus emblica, is a small green fruit renowned for its high vitamin C content and potent antioxidant properties. This plant is a staple in Ayurvedic medicine, valued for its ability to promote overall health.",
     botanicalName: "Phyllanthus emblica",
     commonNames: ["Indian Gooseberry", "Amla"],
@@ -38,7 +38,7 @@ export const plants = {
   },
   moringa: {
     title: "Moringa",
-    modelUrl: "/assets/models/moringa.glb",
+    modelUrl: "/assets/models/chamomile.glb",
     description: "Moringa, commonly referred to as the 'miracle tree,' is recognized for its extraordinary nutritional profile. Moringa leaves are rich in vitamins, minerals, and amino acids, making them an excellent dietary supplement.",
     botanicalName: "Moringa oleifera",
     commonNames: ["Drumstick Tree", "Miracle Tree"],
@@ -73,7 +73,7 @@ export const plants = {
     methodsOfCultivation: "Maple trees are grown from seeds or cuttings and thrive in well-drained, fertile soil. They require full sunlight and adequate moisture, especially in dry seasons.",
   },
   cannabis: {
-    title: "Cannabis (Bhaang)",
+    title: "Cannabis",
     modelUrl: "/assets/models/cannabis.glb",
     description: "Cannabis (Cannabis sativa) is a versatile plant used for its psychoactive properties and various medicinal benefits. It has gained popularity in recent years for its therapeutic applications.",
     botanicalName: "Cannabis sativa",
