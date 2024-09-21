@@ -37,10 +37,9 @@ const PlantDetails = () => {
   if (loading) return <LoadingAnimation />;
 
   return (
-    <div className="flex flex-col md:flex-row lg:flex-row h-screen bg-green-700">
     <div className="flex flex-col md:flex-row h-screen bg-green-700">
       {/* Left section: Model */}
-      <div className="md:w-1/3 p-5 relative flex flex-col items-center justify-center border-r-4 border-yellow-500">
+      <div className="md:w-1/3 p-5 relative flex flex-col items-center justify-center border-r-4 border-green-700 ">
         {modelVisible && (
           <Canvas
             className="h-[300px] md:h-[500px] bg-white rounded-lg shadow-lg"
@@ -181,7 +180,6 @@ const PlantDetails = () => {
           </div>
         </Dialog>
       )}
-    </div>
     </div>
   );
 };
