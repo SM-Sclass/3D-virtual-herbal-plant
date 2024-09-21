@@ -37,7 +37,7 @@ const PlantDetails = () => {
   if (loading) return <LoadingAnimation />;
 
   return (
-    <div className="flex flex-col md:flex-row h-screen bg-[rgb(100, 200, 100)]">
+    <div className="flex flex-col md:flex-row h-screen bg-yellow-100">
       {/* Left section: Model */}
       <div className="md:w-1/3 p-5 relative flex flex-col items-center justify-center border-r-4 border-yellow-500">
         {modelVisible && (
@@ -140,6 +140,18 @@ const PlantDetails = () => {
         >
           Zoom to Flower
         </button>
+        <div className="mt-8 border-t border-yellow-500 pt-4">
+    <h2 className="text-2xl font-bold">Watch the Video</h2>
+    <iframe
+      width="50%"
+      height="315"
+      src="https://www.youtube.com/embed/ibXazvct4KI"
+      title="YouTube video"
+      frameBorder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowFullScreen
+    ></iframe>
+  </div>
       </div>
 
       {/* Full View Modal */}
