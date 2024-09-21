@@ -11,6 +11,7 @@ const PlantDetails = () => {
   const [plantData, setPlantData] = useState(null);
   const [isFullView, setIsFullView] = useState(false);
   const [modelVisible, setModelVisible] = useState(true);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     if (allplants) {
@@ -21,6 +22,7 @@ const PlantDetails = () => {
       } else {
         setPlantData(null);
       }
+      setLoading(false);
     }
   }, [allplants]);
 
@@ -29,10 +31,10 @@ const PlantDetails = () => {
     setModelVisible(true);
   };
 
-  if (!plantData) return <div>Loading...</div>;
+  if (loading) return <LoadingAnimation />;
 
   return (
-    <div className="flex flex-col md:flex-row h-screen bg-[rgb(21,128,61)]">
+    <div className="flex flex-col md:flex-row h-screen bg-[rgb(100, 200, 100)]"> {/* Updated to lighter green */}
       {/* Left section: Model */}
       <div className="md:w-1/3 p-5 relative flex flex-col items-center justify-center border-r-4 border-yellow-500">
         {modelVisible && (
@@ -60,10 +62,11 @@ const PlantDetails = () => {
       </div>
 
       {/* Right section: Scrollable plant info */}
-      <div className="md:w-2/3 p-8 overflow-y-auto text-white">
+      <div className="md:w-2/3 p-8 overflow-y-auto scrollable">
         <h1 className="text-4xl font-bold text-yellow-500">{plantData.title}</h1>
         <p className="mt-6 text-lg leading-relaxed">{plantData.description}</p>
 
+        {/* Add separation using margins */}
         <div className="mt-8 border-t border-yellow-500 pt-4">
           <h2 className="text-2xl font-bold">Botanical Name</h2>
           <p>{plantData.botanicalName}</p>
@@ -100,34 +103,43 @@ const PlantDetails = () => {
         </div>
       </div>
 
-      {/* Full View Modal */}
-      {isFullView && (
-        <Dialog
-          open={isFullView}
-          onClose={handleCloseFullView}
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50"
-        >
-          <div className="relative bg-white w-[calc(100%-700px)] h-[calc(100%-200px)] p-5 rounded-lg shadow-xl">
-            <button
-              onClick={handleCloseFullView}
-              className="absolute top-2 right-2 text-gray-700 hover:text-gray-900"
-            >
-              Close
-            </button>
-            <Canvas className="h-full w-full bg-white rounded-lg shadow-lg" camera={{ position: [0, 0, 10], fov: 60 }}>
-              <ambientLight />
-              <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
-              <Suspense fallback={null}>
-                <Model url={plantData.modelUrl} scale={5} />
-              </Suspense>
-              <OrbitControls enableZoom={true} />
-            </Canvas>
-          </div>
-        </Dialog>
-      )}
+    {/* Full View Modal */}
+{isFullView && (
+  <Dialog
+    open={isFullView}
+    onClose={handleCloseFullView}
+    className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50"
+  >
+    <div className="relative bg-white w-[calc(100%-400px)] h-[calc(100%-100px)] p-5 rounded-lg shadow-xl">
+      <button
+        onClick={handleCloseFullView}
+        className="absolute top-2 right-2 w-8 h-8 flex items-center justify-center bg-red-500 text-white rounded-full hover:bg-red-600 z-10"
+        aria-label="Close"
+      >
+        &times; {/* "X" symbol */}
+      </button>
+      <Canvas className="h-full w-full bg-white rounded-lg shadow-lg" camera={{ position: [0, 0, 10], fov: 60 }}>
+        <ambientLight />
+        <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
+        <Suspense fallback={null}>
+          <Model url={plantData.modelUrl} scale={3} /> {/* Adjust scale if needed */}
+        </Suspense>
+        <OrbitControls enableZoom={true} />
+      </Canvas>
+    </div>
+  </Dialog>
+)}
+
     </div>
   );
 };
+
+// Loading Animation Component
+const LoadingAnimation = () => (
+  <div className="flex items-center justify-center h-screen bg-[rgb(100, 200, 100)]"> {/* Updated to lighter green */}
+    <div className="loader"></div>
+  </div>
+);
 
 // Model component to load GLTF models and control the scale
 const Model = ({ url, scale = 1 }) => {
