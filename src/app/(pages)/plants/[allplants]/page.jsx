@@ -12,7 +12,7 @@ const PlantDetails = () => {
 
   const modelUrls = {
     giloy: '/assets/models/chamomile.glb',
-    turmeric: '/assets/models/turmeric.glb',
+    turmeric: '/assets/models/aloe_vera.glb',
     amla: '/assets/models/amla.glb',
     moringa: '/assets/models/moringa.glb',
   };
