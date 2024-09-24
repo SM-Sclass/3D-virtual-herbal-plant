@@ -8,7 +8,7 @@ function Navbar({ className }) {
     const [active, setActive] = useState(null);
     return (
         <>
-            <div className={cn("fixed top-7 inset-x-0 max-w-2xl mx-auto z-50", className)}>
+            <div className={cn("fixed top-7 inset-x-0 max-w-2xl mx-auto z-50 rounded-full overflow-hidden shadow-xl", className)}>
                 <Menu setActive={setActive}>
                     <Link href={"/"}>
                         <MenuItem setActive={setActive} active={active} item="Home" href="/">
@@ -22,18 +22,17 @@ function Navbar({ className }) {
                         <MenuItem setActive={setActive} active={active} item="Tour" href="/Tour">
                         </MenuItem>
                     </Link>
-                        <MenuItem setActive={setActive} active={active} item="Settings" href="/Tour">
-                            <div className="flex flex-col space-y-4 text-sm">
-                                <HoveredLink href="/Bookmark">Bookmark</HoveredLink>
-                                <HoveredLink href="/Profile">Profile</HoveredLink>
-                                <HoveredLink href="/Logout">Logout</HoveredLink>
-                            </div>
-                        </MenuItem>
+                    <MenuItem setActive={setActive} active={active} item="Settings" href="/Tour">
+                        <div className="flex flex-col space-y-4 text-sm">
+                            <HoveredLink href="/Bookmark">Bookmark</HoveredLink>
+                            <HoveredLink href="/Profile">Profile</HoveredLink>
+                            <HoveredLink href="/Logout">Logout</HoveredLink>
+                        </div>
+                    </MenuItem>
                 </Menu>
             </div>
-
         </>
-    )
+    );
 }
 
-export default Navbar
+export default Navbar;

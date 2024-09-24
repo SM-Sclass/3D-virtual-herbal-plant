@@ -216,9 +216,9 @@ export const plants = {
       benefits: "Mainly ornamental, but some species have edible seeds used for their nutritional value.",
     },
   },
-  wildGarlic: {
+  wildgarlic: {
     title: "Wild Garlic",
-    modelUrl: "/assets/models/wild_garlic.glb",
+    modelUrl: "/assets/models/wildgarlic.glb",
     description: "Wild garlic (Allium ursinum) is a perennial plant known for its distinctive garlicky aroma and flavor. It is commonly found in woodland areas and is valued for its culinary and medicinal uses.",
     botanicalName: "Allium ursinum",
     commonNames: ["Ramsons", "Wild Leek"],
@@ -288,7 +288,7 @@ export const plants = {
       benefits: "Edible flowers used in salads and as garnishes, also used to make borage oil.",
     },
   },
-  argentinaAnserina: {
+  argentinaanserina: {
     title: "Argentina Anserina",
     modelUrl: "/assets/models/chamomile.glb",
     description: "Argentina anserina, commonly known as Silverweed, is a perennial herb found in various habitats. It has a long history of use in traditional medicine.",
@@ -629,7 +629,7 @@ export const plants = {
     },
   },
 
-  jadePlant: {
+  jadeplant: {
     title: "Jade Plant",
     modelUrl: "/assets/models/jade_plant.glb",
     description: "The Jade Plant (Crassula ovata) is a succulent known for its attractive, fleshy leaves and ease of care. It is often associated with good luck and prosperity.",
@@ -654,7 +654,7 @@ export const plants = {
     },
   },
 
-  maleFern: {
+  malefern: {
     title: "Male Fern",
     modelUrl: "/assets/models/male_fern.glb",
     description: "Male Fern (Dryopteris filix-mas) is a hardy fern known for its feathery fronds. It has a long history of medicinal use, particularly in herbal remedies.",

@@ -15,8 +15,8 @@ function LowerSection() {
           <Image 
             src="/assets/img/ayush.png" 
             alt="Ministry of AYUSH" 
-            width={500} 
-            height={150} 
+            width={400} 
+            height={100} 
             className="rounded-lg shadow-lg"
           />
         </div>

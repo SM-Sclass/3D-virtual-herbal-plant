@@ -152,35 +152,36 @@ const PlantDetails = () => {
       allowFullScreen
     ></iframe>
   </div>
-      </div>
+  </div>
 
-      {/* Full View Modal */}
-      {isFullView && (
-        <Dialog
-          open={isFullView}
-          onClose={handleCloseFullView}
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50"
-        >
-          <div className="relative bg-white w-[calc(100%-400px)] h-[calc(100%-100px)] p-5 rounded-lg shadow-xl">
-            <button
-              onClick={handleCloseFullView}
-              className="absolute top-2 right-2 w-8 h-8 flex items-center justify-center bg-red-500 text-white rounded-full hover:bg-red-600 z-10"
-              aria-label="Close"
-            >
-              &times; {/* "X" symbol */}
-            </button>
-            <Canvas className="h-full w-full bg-white rounded-lg shadow-lg" camera={{ position: [0, 0, 10], fov: 20 }}>
-              <ambientLight />
-              <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
-              <Suspense fallback={null}>
-                <Model url={plantData.modelUrl} scale={3} isFullView={isFullView} />
-              </Suspense>
-              <OrbitControls enableZoom={true} />
-            </Canvas>
-          </div>
-        </Dialog>
-      )}
+{/* Full View Modal */}
+{isFullView && (
+  <Dialog
+    open={isFullView}
+    onClose={handleCloseFullView}
+    className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50"
+  >
+    <div className="relative bg-white w-[90%] h-[90%] md:w-[70%] md:h-[80%] p-5 rounded-lg shadow-xl">
+      <button
+        onClick={handleCloseFullView}
+        className="absolute top-2 right-2 w-8 h-8 flex items-center justify-center bg-red-500 text-white rounded-full hover:bg-red-600 z-10"
+        aria-label="Close"
+      >
+        &times; {/* "X" symbol */}
+      </button>
+      <Canvas className="h-full w-full bg-white rounded-lg shadow-lg" camera={{ position: [0, 0, 10], fov: 20 }}>
+        <ambientLight />
+        <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
+        <Suspense fallback={null}>
+          <Model url={plantData.modelUrl} scale={3} isFullView={isFullView} />
+        </Suspense>
+        <OrbitControls enableZoom={true} />
+      </Canvas>
     </div>
+  </Dialog>
+)}
+</div>
+
   );
 };
 
