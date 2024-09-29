@@ -30,7 +30,7 @@ function PlantCard({ plant, urlKey }) {
     updateNote(urlKey, newNote); // Update note in context
   };
 
-  const imagePath = `/assets/img/explore/${urlKey}.png`;
+  const imagePath = `/assets/img/${urlKey}/${urlKey}.png`;
 
   return (
     <div className="relative">
