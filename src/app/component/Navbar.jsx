@@ -6,8 +6,11 @@ import Link from "next/link";
 
 function Navbar({ className }) {
     const [active, setActive] = useState(null);
+    
     return (
-        <div className={cn("fixed top-7 inset-x-0 max-w-2xl mx-auto z-50", className)}>
+        <div 
+            className={cn("fixed top-7 inset-x-0 max-w-2xl mx-auto z-50 shadow-lg bg-white rounded-full", className)} 
+        >
             <Menu setActive={setActive}>
                 <Link href={"/"}>
                     <MenuItem setActive={setActive} active={active} item="Home" href="/">
@@ -21,11 +24,12 @@ function Navbar({ className }) {
                     <MenuItem setActive={setActive} active={active} item="Tour" href="/Tour">
                     </MenuItem>
                 </Link>
-                <Link href="/Blogs">
-  <MenuItem setActive={setActive} active={active} item="Blogs" href="/Blogs">
-  </MenuItem>
-</Link>
-
+                <MenuItem setActive={setActive} active={active} item="Resources" href="">
+                    <div className="flex flex-col space-y-4 text-sm">
+                        <HoveredLink href="/Blogs">Blogs</HoveredLink>
+                        <HoveredLink href="/Quizzes">Quizzes</HoveredLink>
+                    </div>
+                </MenuItem>
                 <MenuItem setActive={setActive} active={active} item="Settings" href="">
                     <div className="flex flex-col space-y-4 text-sm">
                         <HoveredLink href="/Bookmark">Bookmark</HoveredLink>
@@ -35,7 +39,7 @@ function Navbar({ className }) {
                 </MenuItem>
             </Menu>
         </div>
-    )
+    );
 }
 
 export default Navbar;

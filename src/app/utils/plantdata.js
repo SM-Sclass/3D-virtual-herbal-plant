@@ -26,7 +26,7 @@ export const plants = {
   },
   giloy: {
     title: "Giloy",
-    modelUrl: "/assets/models/giloy.glb",
+    modelUrl: "/assets/models/chamomile.glb",
     description: "Giloy (Tinospora cordifolia) is a climbing shrub known for its extensive medicinal properties. It has been used in Ayurveda to boost immunity, treat fever, and detoxify the body. Giloy is recognized for its bitter taste and heart-shaped leaves.",
     botanicalName: "Tinospora cordifolia",
     commonNames: ["Giloy", "Heart-leaved Moonseed"],
@@ -51,13 +51,13 @@ export const plants = {
   },
   turmeric: {
     title: "Turmeric",
-    modelUrl: "/assets/models/turmeric.glb",
+    modelUrl: "/assets/models/chamomile.glb",
     description: "Turmeric (Curcuma longa) is a bright yellow rhizome known for its culinary and medicinal uses. It contains curcumin, which has strong anti-inflammatory and antioxidant properties. It is widely used in Ayurveda to treat various conditions.",
     botanicalName: "Curcuma longa",
     commonNames: ["Turmeric", "Curcumin"],
     habitat: "Native to tropical and subtropical regions, particularly in India and Southeast Asia.",
     theme: "Medicinal",
-    mostlyUsedIn: ["Ayurveda", "Homeopathy"],
+    mostlyUsedIn: ["Ayurveda", "Homeopathy", "Siddha"],
     medicinalUses: "Turmeric is used to reduce inflammation, improve skin health, and support digestive health. It is also effective in alleviating joint pain and improving overall wellness.",
     methodsOfCultivation: "Turmeric is grown from rhizomes planted in well-drained, fertile soil. It requires partial to full sunlight and regular watering to keep the soil moist.",
     leaf: {
@@ -76,13 +76,13 @@ export const plants = {
   },
   amla: {
     title: "Amla",
-    modelUrl: "/assets/models/amla.glb",
+    modelUrl: "/assets/models/chamomile.glb",
     description: "Amla (Phyllanthus emblica), also known as Indian Gooseberry, is prized for its high vitamin C content and antioxidant properties. This small green fruit is a staple in Ayurvedic medicine and is used to promote overall health.",
     botanicalName: "Phyllanthus emblica",
     commonNames: ["Indian Gooseberry", "Amla"],
     habitat: "Grows in deciduous forests and along riverbanks across India and Southeast Asia.",
     theme: "Immunity Booster",
-    mostlyUsedIn: ["Ayurveda", "Naturopathy"],
+    mostlyUsedIn: ["Ayurveda", "Naturopathy", "Siddha"],
     medicinalUses: "Amla supports the immune system, promotes skin health, and aids digestion. It is also used to prevent hair loss and promote hair growth.",
     methodsOfCultivation: "Amla is grown from seeds or grafts in well-drained soil. It thrives in full sunlight and needs regular watering during early growth stages.",
     leaf: {
@@ -101,7 +101,7 @@ export const plants = {
   },
   moringa: {
     title: "Moringa",
-    modelUrl: "/assets/models/moringa.glb",
+    modelUrl: "/assets/models/chamomile.glb",
     description: "Moringa (Moringa oleifera), also known as the Miracle Tree, is highly valued for its nutritional and medicinal benefits. The leaves are rich in vitamins, minerals, and amino acids, making it an excellent dietary supplement.",
     botanicalName: "Moringa oleifera",
     commonNames: ["Drumstick Tree", "Miracle Tree"],
@@ -386,7 +386,7 @@ export const plants = {
     commonNames: ["Stinging Nettle"],
     habitat: "Commonly found in wooded areas, hedgerows, and disturbed soils.",
     theme: "Medicinal",
-    mostlyUsedIn: ["Ayurveda", "Naturopathy"],
+    mostlyUsedIn: ["Ayurveda", "Naturopathy", "Siddha"],
     medicinalUses: "Nettle is commonly used to support joint health, alleviate allergies, and improve skin conditions. It also helps in treating urinary disorders and boosting overall immunity.",
     methodsOfCultivation: "Nettle is grown from seeds or divisions, preferring rich, moist soil and partial shade. It requires regular watering, especially during dry spells.",
     leaf: {
@@ -455,7 +455,7 @@ export const plants = {
   },
   dock: {
     title: "Dock",
-    modelUrl: "/assets/models/dock.glb",
+    modelUrl: "/assets/models/chamomile.glb",
     description: "Dock (Rumex spp.) is a perennial plant known for its large, broad leaves and use in traditional medicine. It is commonly found in damp, disturbed areas and is known for its astringent properties.",
     botanicalName: "Rumex spp.",
     commonNames: ["Dock Leaf"],
@@ -480,7 +480,7 @@ export const plants = {
   },
   brookmint: {
     title: "Brookmint",
-    modelUrl: "/assets/models/brookmint.glb",
+    modelUrl: "/assets/models/chamomile.glb",
     description: "Brookmint (Mentha aquatica), also known as Water Mint, is a perennial herb commonly found near water bodies. It is known for its aromatic leaves and is often used in both culinary and medicinal applications.",
     botanicalName: "Mentha aquatica",
     commonNames: ["Water Mint"],
@@ -505,7 +505,7 @@ export const plants = {
   },
   valerian: {
     title: "Valerian",
-    modelUrl: "/assets/models/valerian.glb",
+    modelUrl: "/assets/models/chamomile.glb",
     description: "Valerian (Valeriana officinalis) is a perennial flowering plant known for its calming effects. It is widely used as a natural remedy for anxiety, insomnia, and restlessness.",
     botanicalName: "Valeriana officinalis",
     commonNames: ["Valerian Root"],
@@ -530,7 +530,7 @@ export const plants = {
   },
   groundsel: {
     title: "Groundsel",
-    modelUrl: "/assets/models/groundsel.glb",
+    modelUrl: "/assets/models/chamomile.glb",
     description: "Groundsel (Senecio vulgaris) is a flowering plant known for its fast growth and adaptability. It is commonly found in disturbed areas and is used in traditional medicine.",
     botanicalName: "Senecio vulgaris",
     commonNames: ["Groundsel"],
@@ -555,7 +555,7 @@ export const plants = {
   },
   raspberry: {
     title: "Raspberry",
-    modelUrl: "/assets/models/raspberry.glb",
+    modelUrl: "/assets/models/chamomile.glb",
     description: "Raspberry (Rubus idaeus) is a thorny shrub known for its sweet, red fruit. It is widely cultivated for culinary purposes and offers numerous health benefits, including immune and heart health support.",
     botanicalName: "Rubus idaeus",
     commonNames: ["Raspberry"],
@@ -580,7 +580,7 @@ export const plants = {
   },
   coltsfoot: {
     title: "Coltsfoot",
-    modelUrl: "/assets/models/coltsfoot.glb",
+    modelUrl: "/assets/models/chamomile.glb",
     description: "Coltsfoot (Tussilago farfara) is a perennial herb that produces bright yellow flowers in early spring. It has been used for centuries to treat respiratory ailments, especially coughs.",
     botanicalName: "Tussilago farfara",
     commonNames: ["Coltsfoot"],
@@ -711,7 +711,7 @@ export const plants = {
     commonNames: ["Neem", "Indian Lilac"],
     habitat: "Grows in tropical and subtropical regions, particularly in India.",
     theme: "Medicinal",
-    mostlyUsedIn: ["Ayurveda", "Unani"],
+    mostlyUsedIn: ["Ayurveda", "Unani", "Siddha"],
     medicinalUses: "Neem is valued for its antibacterial, antifungal, and antiviral properties. It is commonly used in skin treatments, dental care, and to boost overall immunity.",
     methodsOfCultivation: "Neem is grown from seeds or cuttings in well-drained soil. It thrives in full sun and is drought-resistant once established.",
     leaf: {
