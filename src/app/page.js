@@ -1,6 +1,5 @@
 import Showcase from "./component/Showcase"
 import Feature from "./component/Feature"
-import Refplant from "./component/Refplant"
 import LowerSection from "./component/LowerSection"
 export default function Home() {
   return (

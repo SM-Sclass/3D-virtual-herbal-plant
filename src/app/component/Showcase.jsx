@@ -20,11 +20,6 @@ function Showcase() {
               Explore <i className="ri-leaf-line"></i>
             </Link>
           </div>
-          <div className="m-3">
-          <i className="ri-facebook-line"></i>
-          <i className="ri-twitter-x-line"></i>
-          <i className="ri-instagram-line"></i>
-          </div>
 
         </div>
         <div>

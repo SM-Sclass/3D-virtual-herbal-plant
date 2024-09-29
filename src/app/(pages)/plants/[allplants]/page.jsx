@@ -5,6 +5,7 @@ import { Canvas, useFrame } from '@react-three/fiber';
 import { OrbitControls, useGLTF } from '@react-three/drei';
 import { Dialog } from '@headlessui/react';
 import { plants } from '../../../utils/plantdata';
+import ImageCarousel from '../../../component/ImageCarousel'; // Adjust based on the actual relative path
 
 const PlantDetails = () => {
   const { allplants } = useParams();
@@ -39,31 +40,32 @@ const PlantDetails = () => {
   return (
     <div className="flex flex-col md:flex-row h-screen bg-green-700">
       {/* Left section: Model */}
-      <div className="md:w-1/3 p-5 relative flex flex-col items-center justify-center border-r-4 border-green-700 ">
-        {modelVisible && (
-          <Canvas
-            className="h-[300px] md:h-[500px] bg-white rounded-lg shadow-lg"
-            camera={{ position: [0, 0, 8], fov: 40 }}
-            ref={canvasRef}
-          >
-            <ambientLight />
-            <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
-            <Suspense fallback={null}>
-              <Model url={plantData.modelUrl} scale={4} currentSection={currentSection} isFullView={isFullView} />
-            </Suspense>
-            <OrbitControls enableZoom={isFullView} />
-          </Canvas>
-        )}
-        <button
-          onClick={() => {
-            setIsFullView(true);
-            setModelVisible(false);
-          }}
-          className="mt-4 bg-yellow-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-yellow-600 transition"
-        >
-          Full View
-        </button>
-      </div>
+      <div className="md:w-1/3 p-5 relative flex flex-col items-center justify-between h-[500px] border-r-4 border-green-700"> {/* Set fixed height */}
+  {modelVisible && (
+    <Canvas
+      className="h-[60%] bg-white rounded-lg shadow-lg" // Adjust height percentage
+      camera={{ position: [0, 0, 8], fov: 40 }}
+      ref={canvasRef}
+    >
+      <ambientLight />
+      <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
+      <Suspense fallback={null}>
+        <Model url={plantData.modelUrl} scale={4} currentSection={currentSection} isFullView={isFullView} />
+      </Suspense>
+      <OrbitControls enableZoom={isFullView} />
+    </Canvas>
+  )}
+  <button
+    onClick={() => {
+      setIsFullView(true);
+      setModelVisible(false);
+    }}
+    className="mt-2 bg-yellow-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-yellow-600 transition"
+  >
+    Full View
+  </button>
+</div>
+
 
       {/* Right section: Button Controls */}
       <div className="md:w-2/3 p-8 overflow-y-auto scrollable">
@@ -104,6 +106,12 @@ const PlantDetails = () => {
           <h2 className="text-2xl font-bold">Methods of Cultivation</h2>
           <p>{plantData.methodsOfCultivation}</p>
         </div>
+        
+        <div className="mt-4 border-t border-yellow-500 pt-4">
+          <h2 className="text-2xl font-bold mb-4">Images</h2>
+          <ImageCarousel folderPath={`/assets/img/${allplants.toLowerCase()}`} />
+        </div>
+
         <div className="mt-4 border-t border-yellow-500 pt-4">
           <h2 className="text-2xl font-bold">Leaf</h2>
           <p>{plantData.leaf.description}</p>
@@ -141,17 +149,21 @@ const PlantDetails = () => {
           Zoom to Flower
         </button>
         <div className="mt-8 border-t border-yellow-500 pt-4">
-    <h2 className="text-2xl font-bold">Watch the Video</h2>
+  <h2 className="text-2xl font-bold">Watch the Video</h2>
+  {plantData.link ? (
     <iframe
       width="50%"
       height="315"
-      src="https://www.youtube.com/embed/ibXazvct4KI"
+      src={`https://www.youtube.com/embed/${plantData.link.split('/').pop()}`}
       title="YouTube video"
-      frameBorder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowFullScreen
     ></iframe>
-  </div>
+  ) : (
+    <p>No video available</p>
+  )}
+</div>
+
   </div>
 
 {/* Full View Modal */}
