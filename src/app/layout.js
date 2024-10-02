@@ -1,6 +1,7 @@
 import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "./component/Navbar";
+import Footer from "./component/Footer"; 
 import { BookmarkProvider } from "./contextapi/BookmarkContext"; // Import your BookmarkProvider
 
 const geistSans = localFont({
@@ -35,8 +36,9 @@ export default function RootLayout({ children }) {
           <Navbar />
           <div className="h-32 bg-green-700"></div>
           {children}
+          <Footer />
         </BookmarkProvider>
-
+        
       </body>
     </html>
   );

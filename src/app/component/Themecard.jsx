@@ -1,19 +1,15 @@
-import React from 'react'
-import Image from 'next/image'
+import React from "react";
 
+const Themecard = ({ image, title, description, backgroundColor }) => {
+  return (
+    <div className="bg-white rounded-lg shadow-lg p-4" style={{ backgroundColor }}>
+      <img src={image} alt={title} className="w-full h-80 object-cover rounded-t-lg" />
+      <h3 className="text-xl font-semibold mt-2">{title}</h3>
+      <p className="text-gray-700 mt-1" style={{ fontFamily: "'Poppins', sans-serif" }}>
+        {description}
+      </p>
+    </div>
+  );
+};
 
-function Themecard({ image, title, description, backgroundColor }) {
-    return (
-      <div className=' w-full h-[32rem] space-y-3 p-5'>
-        <div className='flex justify-center h-60'>
-          <Image src={image}
-            alt={title}
-            width={400} 
-            height={400} />
-        </div>
-        <h2 className='font-bold text-2xl p-4 rounded-3xl' style={{backgroundColor}}>{title}</h2>
-        <p className='font-Satisfy text-xl p-4 rounded-3xl' style={{backgroundColor}}>{description}</p>
-      </div>
-    );
-  }
-export default Themecard
+export default Themecard;
