@@ -23,7 +23,7 @@ function Showcase() {
 
         </div>
         <div>
-            <Image src="/assets/img/home.png" alt="Plant Image" width={500} height={300}></Image>
+            <Image src="/assets/img/home.png" alt="Plant Image" width={500} height={300}/>
         </div>
       </div>
   )
