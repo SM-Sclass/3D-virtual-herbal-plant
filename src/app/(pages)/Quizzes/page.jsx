@@ -3,12 +3,12 @@ import React, { useState } from 'react';
 
 const QuizCard = ({ title, description, onStartQuiz }) => {
   return (
-    <div className="quiz-card bg-white rounded-lg shadow-lg p-4 m-4 hover:shadow-xl transition-shadow duration-200 ease-in-out">
+    <div className="quiz-card bg-white rounded-lg shadow-lg p-6 m-4 hover:shadow-xl transition-shadow duration-200 ease-in-out">
       <h2 className="text-xl font-bold mb-2">{title}</h2>
       <p className="text-gray-700 mb-4">{description}</p>
       <button 
         onClick={onStartQuiz} 
-        className="bg-green-600 text-white py-2 px-4 rounded hover:bg-green-700 transition-colors duration-200">
+        className="bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-green-700 transition-colors duration-200">
         Start Quiz
       </button>
     </div>
@@ -19,10 +19,13 @@ const Quiz = ({ quizData, onBack }) => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
   const [showScore, setShowScore] = useState(false);
+  const [wrongAnswers, setWrongAnswers] = useState(0);
 
   const handleAnswerOptionClick = (selectedOption) => {
     if (selectedOption === quizData[currentQuestion].answer) {
       setScore(score + 1);
+    } else {
+      setWrongAnswers(wrongAnswers + 1);
     }
 
     const nextQuestion = currentQuestion + 1;
@@ -36,11 +39,16 @@ const Quiz = ({ quizData, onBack }) => {
   return (
     <div className="quiz-section p-6 bg-white rounded-lg shadow-lg">
       {showScore ? (
-        <div className="score-section text-center text-xl">
-          You scored {score} out of {quizData.length}
-          <br />
+        <div className="score-section text-center">
+          <h2 className="text-2xl font-bold mb-4">Quiz Results</h2>
+          <p className="text-lg">Correct answers: {score}</p>
+          <p className="text-lg">Wrong answers: {wrongAnswers}</p>
+          <p className="text-lg">Total questions: {quizData.length}</p>
+          <p className="text-lg font-semibold">
+            Percentage Score: {((score / quizData.length) * 100).toFixed(2)}%
+          </p>
           <button 
-            className="mt-4 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition-colors duration-200"
+            className="mt-6 bg-blue-500 text-white py-2 px-6 rounded-lg hover:bg-blue-600 transition-colors duration-200"
             onClick={onBack}>
             Back to Quizzes
           </button>
@@ -48,7 +56,10 @@ const Quiz = ({ quizData, onBack }) => {
       ) : (
         <div>
           <div className="question-section mb-6">
-            <h2 className="text-2xl mb-4">{quizData[currentQuestion].question}</h2>
+            <h2 className="text-2xl font-bold mb-4">
+              Question {currentQuestion + 1} of {quizData.length}
+            </h2>
+            <p className="text-lg mb-6">{quizData[currentQuestion].question}</p>
           </div>
           <div className="options-section grid grid-cols-1 md:grid-cols-2 gap-4">
             {quizData[currentQuestion].options.map((option, index) => (
@@ -100,7 +111,6 @@ const QuizPage = () => {
           answer: "Amla"
         }
       ]
-      
     },
     {
       title: "Herbal Medicine",
@@ -132,9 +142,7 @@ const QuizPage = () => {
           answer: "Ashwagandha"
         }
       ]
-      
     }
-    // Add more quizzes as needed
   ];
 
   const handleStartQuiz = (quiz) => {

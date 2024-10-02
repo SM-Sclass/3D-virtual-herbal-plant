@@ -138,6 +138,9 @@ const ThreeDScene = ({ plants, onExitFullScreen }) => {
   };
 
   const exitFullScreen = () => {
+    // Stop ongoing speech when exiting full screen
+    speechSynthesis.cancel();
+  
     if (document.fullscreenElement) {
       if (document.exitFullscreen) {
         document.exitFullscreen().catch(err => {
@@ -148,11 +151,12 @@ const ThreeDScene = ({ plants, onExitFullScreen }) => {
     document.body.style.overflow = 'auto';
     if (onExitFullScreen) onExitFullScreen();
   };
+  
 
   return (
     <div ref={mountRef} style={{ width: '100%', height: '100vh', position: 'relative' }}>
       {/* 3D Scene container */}
-      <div style={{ position: 'absolute', top: '10%', left: '5%', backgroundColor: 'rgba(255, 255, 255, 0.8)', padding: '20px', borderRadius: '8px', maxWidth: '300px' }}>
+      <div style={{ position: 'absolute', top: '10%', left: '5%', backgroundColor: 'rgba(255, 255, 255, 0.8)', padding: '20px', borderRadius: '8px', maxWidth: '400px' }}>
         <h2>{currentPlant.title}</h2>
         <p><strong>Botanical Name:</strong> {currentPlant.botanicalName}</p>
         <p><strong>Common Names:</strong> {currentPlant.commonNames.join(", ")}</p>

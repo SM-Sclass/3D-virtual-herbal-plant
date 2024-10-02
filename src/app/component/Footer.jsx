@@ -10,7 +10,7 @@ function Footer() {
           &copy; Copyright <strong>Ministry of Ayush</strong>. All Rights Reserved
         </div>
         <div className="text-center text-sm">
-          Designed by <strong>Dora D. Developers</strong>
+          Created by <strong>Dora D. Developers</strong>
         </div>
         <div className="flex space-x-4">
           <Link href="https://twitter.com/moayush" aria-label="Twitter" className="hover:opacity-75">
