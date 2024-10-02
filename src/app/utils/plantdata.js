@@ -485,7 +485,7 @@ export const plants = {
     botanicalName: "Tussilago farfara",
     commonNames: ["Coltsfoot"],
     habitat: "Commonly found in wet meadows and along roadsides.",
-    theme: "Medicinal",
+    theme: "Haircare",
     mostlyUsedIn: ["Homeopathy"],
     medicinalUses: "Coltsfoot is traditionally used to relieve coughs and treat respiratory issues due to its soothing properties.",
     methodsOfCultivation: "Coltsfoot is grown from seeds and prefers moist, rich soil. It thrives in partial to full sunlight and requires regular watering.",
