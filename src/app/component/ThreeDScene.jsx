@@ -8,9 +8,11 @@ const ThreeDScene = ({ plants, onExitFullScreen }) => {
   const mountRef = useRef(null);
   const [currentPlantIndex, setCurrentPlantIndex] = useState(0);
   const loader = new GLTFLoader();
-  let groundModel = null;
-  let plantModel = null;
 
+  // Use refs to persist groundModel and plantModel
+  const groundModelRef = useRef(null);
+  const plantModelRef = useRef(null);
+  
   const currentPlant = plants[currentPlantIndex]; // Get the current plant's details
 
   useEffect(() => {
@@ -33,9 +35,9 @@ const ThreeDScene = ({ plants, onExitFullScreen }) => {
 
     // Load ground model
     loader.load('/assets/models/grass.glb', (gltf) => {
-      groundModel = gltf.scene;
-      groundModel.scale.set(10, 1, 10);
-      scene.add(groundModel);
+      groundModelRef.current = gltf.scene; // Set the ground model ref
+      groundModelRef.current.scale.set(10, 1, 10);
+      scene.add(groundModelRef.current);
 
       // Load the first plant model
       loadPlantModel(currentPlantIndex);
@@ -45,25 +47,25 @@ const ThreeDScene = ({ plants, onExitFullScreen }) => {
 
     const loadPlantModel = (index) => {
       const plant = plants[index];
-      if (plantModel) {
-        scene.remove(plantModel); // Remove the previous plant model if it exists
+      if (plantModelRef.current) {
+        scene.remove(plantModelRef.current); // Remove the previous plant model if it exists
       }
 
       loader.load(plant.modelUrl, (gltf) => {
-        plantModel = gltf.scene;
+        plantModelRef.current = gltf.scene; // Set the plant model ref
 
         // Calculate the bounding box of the plant model
-        const box = new THREE.Box3().setFromObject(plantModel);
+        const box = new THREE.Box3().setFromObject(plantModelRef.current);
         const height = box.max.y - box.min.y;
 
         const targetHeight = 4;
 
         // Calculate scale factor
         const scaleFactor = targetHeight / height;
-        plantModel.scale.set(scaleFactor, scaleFactor, scaleFactor);
+        plantModelRef.current.scale.set(scaleFactor, scaleFactor, scaleFactor);
 
-        plantModel.position.set(0, ((scaleFactor * height) / 2) - 2.2, 0);
-        scene.add(plantModel);
+        plantModelRef.current.position.set(0, ((scaleFactor * height) / 2) - 2.2, 0);
+        scene.add(plantModelRef.current);
       }, undefined, (error) => {
         console.error('An error happened loading the plant model:', error);
       });

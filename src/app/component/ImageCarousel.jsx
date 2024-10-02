@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import Image from 'next/image';
 
 const ImageCarousel = ({ folderPath }) => {
   const [images, setImages] = useState([]);
@@ -58,12 +59,14 @@ const ImageCarousel = ({ folderPath }) => {
           images.map((image, index) => (
             <div
               key={index}
-              className="min-w-[200px] h-[200px] flex-shrink-0 bg-gray-200 rounded-lg overflow-hidden"
+              className="relative min-w-[200px] h-[200px] flex-shrink-0 bg-gray-200 rounded-lg overflow-hidden"
             >
-              <img
+              <Image
                 src={image}
                 alt={`Image ${index}`}
-                className="w-full h-full object-cover"
+                layout="fill" // Use layout fill to make the image cover the container
+                objectFit="cover" // Keep the image aspect ratio
+                className="absolute inset-0" // Position the image within the parent div
               />
             </div>
           ))

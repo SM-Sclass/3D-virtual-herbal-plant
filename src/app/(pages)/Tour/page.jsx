@@ -52,7 +52,7 @@ function Tour() {
       <div className="flex flex-col gap-3 items-center text-center mb-16">
         <h2 className="text-yellow-500 text-3xl font-bold">Themes</h2>
         <p className="max-w-2xl text-white text-lg">
-          Explore diverse plant themes that transform your space into a vibrant tapestry of nature's beauty and healing.
+          Explore diverse plant themes that transform your space into a vibrant tapestry of nature&apos;s beauty and healing.
         </p>
       </div>
       <div className="container w-full grid grid-cols-1 gap-8 md:grid-cols-2">
