@@ -605,7 +605,7 @@ export const plants = {
   },
   neem: {
     title: "Neem",
-    modelUrl: "/assets/models/neem.glb",
+    modelUrl: "/assets/models/maple.glb",
     description: "Neem (Azadirachta indica) is a fast-growing tree known for its medicinal properties. Every part of the tree, from the bark to the leaves, has been used in traditional medicine, especially in Ayurveda and Unani.",
     botanicalName: "Azadirachta indica",
     commonNames: ["Neem", "Indian Lilac"],

@@ -61,7 +61,7 @@ function PlantCard({ plant, urlKey }) {
             value={note}
             onChange={handleNoteChange}
             placeholder="Take your notes here..."
-            className="w-full h-24 p-2 border rounded-md"
+            className="w-full h-24 p-2 border text-black rounded-md"
           />
         </div>
       )}
