@@ -6,6 +6,7 @@ import { OrbitControls, useGLTF } from '@react-three/drei';
 import { Dialog } from '@headlessui/react';
 import { plants } from '../../../utils/plantdata';
 import ImageCarousel from '../../../component/ImageCarousel'; // Adjust based on the actual relative path
+import * as THREE from 'three';
 
 const PlantDetails = () => {
   const { allplants } = useParams();
@@ -206,11 +207,25 @@ const LoadingAnimation = () => (
 );
 
 // Model component to load GLTF models and control the scale
-const Model = ({ url, scale = 1, currentSection, isFullView }) => {
+const Model = ({ url, currentSection, isFullView }) => {
   const { scene } = useGLTF(url);
   const leafRef = useRef();
   const stemRef = useRef();
   const flowerRef = useRef();
+  const [modelScale, setModelScale] = useState([1, 1, 1]);
+
+  // Compute model's bounding box and adjust scale
+  useEffect(() => {
+    const box = new THREE.Box3().setFromObject(scene); // Compute bounding box of the model
+    const size = new THREE.Vector3();
+    box.getSize(size); // Get the size of the model in each dimension
+
+    // Compute scale based on the largest dimension and the size of the window or Canvas container
+    const maxDimension = Math.max(size.x, size.y, size.z);
+    const scaleFactor = isFullView ? 1 / maxDimension * 8 : 1 / maxDimension * 4; // Adjust based on full view or normal view
+
+    setModelScale([scaleFactor, scaleFactor, scaleFactor]); // Set uniform scale for all axes
+  }, [scene, isFullView]);
 
   // Find specific parts of the model using object names
   useEffect(() => {
@@ -225,42 +240,43 @@ const Model = ({ url, scale = 1, currentSection, isFullView }) => {
       scene.rotation.y += 0.01; // Continue rotating if not zooming
     }
 
-    // Top-down view of the leaf
+    // Zoom to Leaf
     if (currentSection === 'leaf' && leafRef.current) {
       state.camera.lookAt(leafRef.current.position);
       state.camera.position.set(
-        leafRef.current.position.x, // Keep the same x position
-        leafRef.current.position.y + 2, // Move upwards for top-down view
-        leafRef.current.position.z // Slightly higher on the z-axis
+        leafRef.current.position.x,
+        leafRef.current.position.y + 2,
+        leafRef.current.position.z
       );
-      state.camera.rotation.set(-Math.PI / 2, 0, 0); // Rotate camera to look down
+      state.camera.rotation.set(-Math.PI / 2, 0, 0);
     }
 
-    // Top-down view of the stem
+    // Zoom to Stem
     else if (currentSection === 'stem' && stemRef.current) {
       state.camera.lookAt(stemRef.current.position);
       state.camera.position.set(
-        stemRef.current.position.x, 
-        stemRef.current.position.y + 2, 
+        stemRef.current.position.x,
+        stemRef.current.position.y + 2,
         stemRef.current.position.z
       );
-      state.camera.rotation.set(-Math.PI / 2, 0, 0); // Rotate to top-down view
+      state.camera.rotation.set(-Math.PI / 2, 0, 0);
     }
 
-    // Top-down view of the flower
+    // Zoom to Flower
     else if (currentSection === 'flower' && flowerRef.current) {
       state.camera.lookAt(flowerRef.current.position);
       state.camera.position.set(
-        flowerRef.current.position.x, 
-        flowerRef.current.position.y + 3, // Move upwards for top-down view
+        flowerRef.current.position.x,
+        flowerRef.current.position.y + 3,
         flowerRef.current.position.z
       );
-      state.camera.rotation.set(-Math.PI / 2, 0, 0); // Rotate to top-down view
+      state.camera.rotation.set(-Math.PI / 2, 0, 0);
     }
   });
 
-  return <primitive object={scene} scale={[scale, scale, scale]} position={[0, -1, 0]}/>;
+  return <primitive object={scene} scale={modelScale} position={[0, -1, 0]} />;
 };
+
 
 
 export default PlantDetails;
