@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-
+import Image from 'next/image';
 const ImageCarousel = ({ folderPath }) => {
   const [images, setImages] = useState([]);
   const carouselRef = useRef(null);
@@ -60,7 +60,7 @@ const ImageCarousel = ({ folderPath }) => {
               key={index}
               className="min-w-[200px] h-[200px] flex-shrink-0 bg-gray-200 rounded-lg overflow-hidden"
             >
-              <img
+              <Image
                 src={image}
                 alt={`Image ${index}`}
                 className="w-full h-full object-cover"
