@@ -12,13 +12,13 @@
 
 :root {
   --background: #b2f0b2; /* Light green background */
-  --foreground: #171717;
+  --foreground: rgba(23, 23, 23, 1); /* Using rgba for foreground */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: rgb(21, 128, 61);
-    --foreground: #ededed;
+    --foreground: rgba(237, 237, 237, 1); /* Using rgba for better contrast */
   }
 }
 
@@ -28,9 +28,11 @@ body {
   font-family: 'Poppins', Arial, Helvetica, sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Poppins', Arial, Helvetica, sans-serif; /* Use Poppins for headings */
+h1, h2, h3, h4, h5, h6, p {
+  color: var(--foreground); /* Ensure headings also use foreground color */
+  margin: 0; /* Reset margin */
 }
+
 
 p {
   line-height: 1.6;
