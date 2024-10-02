@@ -24,6 +24,12 @@ function Navbar({ className }) {
                     <MenuItem setActive={setActive} active={active} item="Tour" href="/Tour">
                     </MenuItem>
                 </Link>
+                <MenuItem setActive={setActive} active={active} item="Resources" href="">
+                    <div className="flex flex-col space-y-4 text-sm">
+                        <HoveredLink href="/Blogs">Blogs</HoveredLink>
+                        <HoveredLink href="/Quizzes">Quizzes</HoveredLink>
+                    </div>
+                </MenuItem>
                 <MenuItem setActive={setActive} active={active} item="Settings" href="">
                     <div className="flex flex-col space-y-4 text-sm">
                         <HoveredLink href="/Bookmark">Bookmark</HoveredLink>
