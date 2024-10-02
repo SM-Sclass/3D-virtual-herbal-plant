@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image"; // Import Image component from next/image
 
+import Image from "next/image";
 const Themecard = ({ image, title, description, backgroundColor }) => {
   return (
     <div className="bg-white rounded-lg shadow-lg p-4" style={{ backgroundColor }}>

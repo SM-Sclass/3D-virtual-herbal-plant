@@ -6,7 +6,7 @@ import Link from "next/link";
 function Tour() {
   const themes = [
     {
-      name: "Medicinal",
+      name: "Immunity Booster",
       cards: {
         image: "/assets/img/themes/medicinal.png",
         title: "Medicinal Theme",
@@ -36,7 +36,7 @@ function Tour() {
       },
     },
     {
-      name: "Immunity Booster",
+      name: "Medicinal",
       cards: {
         image: "/assets/img/themes/immunity_booster.png",
         title: "Immunity Booster Theme",

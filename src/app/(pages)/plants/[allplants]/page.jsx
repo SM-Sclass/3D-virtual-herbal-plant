@@ -1,6 +1,6 @@
 "use client";
 import { useParams } from 'next/navigation';
-import React, { useEffect, useState, Suspense, useRef } from 'react';
+import React, { useEffect, useState, Suspense, useRef, useMemo } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { OrbitControls, useGLTF } from '@react-three/drei';
 import { Dialog } from '@headlessui/react';
@@ -35,6 +35,7 @@ const PlantDetails = () => {
     setIsFullView(false);
     setModelVisible(true);
   };
+  const modelUrl = useMemo(() => (plantData ? plantData.modelUrl : null), [plantData]);
 
   if (loading) return <LoadingAnimation />;
 

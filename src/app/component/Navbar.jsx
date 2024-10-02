@@ -39,7 +39,9 @@ function Navbar({ className }) {
                 </MenuItem>
             </Menu>
         </div>
-    );
+
+    )
+    ;
 }
 
 export default Navbar;
