@@ -156,19 +156,43 @@ const ThreeDScene = ({ plants, onExitFullScreen }) => {
   
 
   return (
-    <div ref={mountRef} style={{ width: '100%', height: '100vh', position: 'relative' }}>
+    <div ref={mountRef} style={{ width: '100%', height: '100vh', position: 'relative', color: 'black' }}>
       {/* 3D Scene container */}
-      <div style={{ position: 'absolute', top: '10%', left: '5%', backgroundColor: 'rgba(255, 255, 255, 0.8)', padding: '20px', borderRadius: '8px', maxWidth: '400px' }}>
-        <h2>{currentPlant.title}</h2>
-        <p><strong>Botanical Name:</strong> {currentPlant.botanicalName}</p>
-        <p><strong>Common Names:</strong> {currentPlant.commonNames.join(", ")}</p>
-        <p><strong>Habitat:</strong> {currentPlant.habitat}</p>
-        <p><strong>Theme:</strong> {currentPlant.theme}</p>
-        <p><strong>Mostly Used In:</strong> {currentPlant.mostlyUsedIn.join(", ")}</p>
-        <p><strong>Medicinal Uses:</strong> {currentPlant.medicinalUses}</p>
-        <p><strong>Methods of Cultivation:</strong> {currentPlant.methodsOfCultivation}</p>
+      <div
+        style={{
+          position: 'absolute',
+          top: '10%',
+          left: '5%',
+          backgroundColor: 'rgba(255, 255, 255, 0.8)',
+          padding: '20px',
+          borderRadius: '8px',
+          maxWidth: '400px',
+        }}
+      >
+        <h2 style={{ color: 'black' }}>{currentPlant.title}</h2>
+        <p>
+          <strong style={{ color: 'black' }}>Botanical Name:</strong> {currentPlant.botanicalName}
+        </p>
+        <p>
+          <strong style={{ color: 'black' }}>Common Names:</strong> {currentPlant.commonNames.join(", ")}
+        </p>
+        <p>
+          <strong style={{ color: 'black' }}>Habitat:</strong> {currentPlant.habitat}
+        </p>
+        <p>
+          <strong style={{ color: 'black' }}>Theme:</strong> {currentPlant.theme}
+        </p>
+        <p>
+          <strong style={{ color: 'black' }}>Mostly Used In:</strong> {currentPlant.mostlyUsedIn.join(", ")}
+        </p>
+        <p>
+          <strong style={{ color: 'black' }}>Medicinal Uses:</strong> {currentPlant.medicinalUses}
+        </p>
+        <p>
+          <strong style={{ color: 'black' }}>Methods of Cultivation:</strong> {currentPlant.methodsOfCultivation}
+        </p>
       </div>
-
+  
       {/* Control buttons */}
       <button
         onClick={handleNextPlant}
@@ -176,7 +200,7 @@ const ThreeDScene = ({ plants, onExitFullScreen }) => {
       >
         Next Plant
       </button>
-
+  
       {/* Button to trigger speech synthesis */}
       <button
         onClick={() => readOutPlantInfo(currentPlant)}
@@ -184,7 +208,7 @@ const ThreeDScene = ({ plants, onExitFullScreen }) => {
       >
         Read Out
       </button>
-
+  
       <button
         onClick={enterFullScreen}
         className="absolute top-4 right-4 bg-green-600 text-white py-2 px-4 rounded-md hover:bg-green-700 transition duration-200"
@@ -199,6 +223,7 @@ const ThreeDScene = ({ plants, onExitFullScreen }) => {
       </button>
     </div>
   );
+  
 };
 
 export default ThreeDScene;

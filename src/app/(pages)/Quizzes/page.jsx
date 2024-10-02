@@ -158,7 +158,7 @@ const QuizPage = () => {
       {selectedQuiz ? (
         <Quiz quizData={selectedQuiz.quizData} onBack={handleBackToQuizzes} />
       ) : (
-        <div className="quiz-cards grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="quiz-cards grid grid-cols-1 md:grid-cols-2 gap-6 text-black">
           {quizzes.map((quiz, index) => (
             <QuizCard
               key={index}

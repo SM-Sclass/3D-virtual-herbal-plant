@@ -63,7 +63,7 @@ function Explore() {
             <select
               value={selectedHabitat}
               onChange={(e) => setSelectedHabitat(e.target.value)}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500 text-gray-500"
             >
               <option value="">All Habitats</option>
               {habitats.map((habitat, index) => (
@@ -79,7 +79,7 @@ function Explore() {
             <select
               value={selectedTheme}
               onChange={(e) => setSelectedTheme(e.target.value)}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500 text-gray-500"
             >
               <option value="">All Themes</option>
               {themes.map((theme, index) => (
@@ -95,7 +95,7 @@ function Explore() {
             <select
               value={selectedUse}
               onChange={(e) => setSelectedUse(e.target.value)}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500 text-gray-500"
             >
               <option value="">All Uses</option>
               {medicinalUses.map((use, index) => (
