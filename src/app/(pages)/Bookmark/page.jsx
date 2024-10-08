@@ -23,7 +23,7 @@ function Bookmark() {
             );
           })
         ) : (
-          <p className="text-center">No bookmarks found.</p> // Message when there are no bookmarks
+          <p className="text-center text-green-600">No bookmarks found.</p> // Message when there are no bookmarks
         )}
       </div>
     </div>
