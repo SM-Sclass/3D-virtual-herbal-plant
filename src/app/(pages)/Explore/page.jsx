@@ -63,11 +63,11 @@ function Explore() {
             <select
               value={selectedHabitat}
               onChange={(e) => setSelectedHabitat(e.target.value)}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500"
+              className="w-full px-4 py-2 border border-gray-300 text-black rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500"
             >
-              <option value="">All Habitats</option>
+              <option value="" className='text-black'>All Habitats</option>
               {habitats.map((habitat, index) => (
-                <option key={index} value={habitat}>
+                <option key={index} value={habitat} className='text-black'>
                   {habitat}
                 </option>
               ))}
@@ -79,9 +79,9 @@ function Explore() {
             <select
               value={selectedTheme}
               onChange={(e) => setSelectedTheme(e.target.value)}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500"
+              className="w-full px-4 py-2 border text-black border-green-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500"
             >
-              <option value="">All Themes</option>
+              <option className='text-black' value="">All Themes</option>
               {themes.map((theme, index) => (
                 <option key={index} value={theme}>
                   {theme}
@@ -95,7 +95,7 @@ function Explore() {
             <select
               value={selectedUse}
               onChange={(e) => setSelectedUse(e.target.value)}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg text-black shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500"
             >
               <option value="">All Uses</option>
               {medicinalUses.map((use, index) => (
