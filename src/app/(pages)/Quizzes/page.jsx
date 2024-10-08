@@ -39,12 +39,12 @@ const Quiz = ({ quizData, onBack }) => {
   return (
     <div className="quiz-section p-6 bg-white rounded-lg shadow-lg">
       {showScore ? (
-        <div className="score-section text-center">
-          <h2 className="text-2xl font-bold mb-4">Quiz Results</h2>
-          <p className="text-lg">Correct answers: {score}</p>
-          <p className="text-lg">Wrong answers: {wrongAnswers}</p>
-          <p className="text-lg">Total questions: {quizData.length}</p>
-          <p className="text-lg font-semibold">
+        <div className="score-section text-center text-black">
+          <h2 className="text-2xl font-bold mb-4 text-green-900">Quiz Results</h2>
+          <p className="text-lg text-green-700">Correct answers: {score}</p>
+          <p className="text-lg text-green-700">Wrong answers: {wrongAnswers}</p>
+          <p className="text-lg text-green-700">Total questions: {quizData.length}</p>
+          <p className="text-lg font-semibold text-green-900">
             Percentage Score: {((score / quizData.length) * 100).toFixed(2)}%
           </p>
           <button 
@@ -56,10 +56,10 @@ const Quiz = ({ quizData, onBack }) => {
       ) : (
         <div>
           <div className="question-section mb-6">
-            <h2 className="text-2xl font-bold mb-4">
+            <h2 className="text-2xl font-bold mb-4 text-green-900">
               Question {currentQuestion + 1} of {quizData.length}
             </h2>
-            <p className="text-lg mb-6">{quizData[currentQuestion].question}</p>
+            <p className="text-lg mb-6 text-green-700">{quizData[currentQuestion].question}</p>
           </div>
           <div className="options-section grid grid-cols-1 md:grid-cols-2 gap-4">
             {quizData[currentQuestion].options.map((option, index) => (

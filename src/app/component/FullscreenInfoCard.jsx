@@ -7,7 +7,7 @@ const FullscreenInfoCard = ({ onFullScreen }) => {
   return (
     <div className="bg-white p-6 rounded-md shadow-lg text-center">
       <h2 className="text-2xl font-bold text-green-900 mb-4">Welcome to the Virtual Tour!</h2>
-      <p className="mb-6">
+      <p className="mb-6 text-green-700">
         Explore the vibrant world of Herbal plants in our immersive 3D environment. 
         Get ready to learn about their properties and uses.
       </p>
