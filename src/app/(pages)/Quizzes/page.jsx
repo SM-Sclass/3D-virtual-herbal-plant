@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 const QuizCard = ({ title, description, onStartQuiz }) => {
   return (
     <div className="quiz-card bg-white rounded-lg shadow-lg p-6 m-4 hover:shadow-xl transition-shadow duration-200 ease-in-out">
-      <h2 className="text-xl font-bold mb-2">{title}</h2>
+      <h2 className="text-xl font-bold mb-2 text-gray-900">{title}</h2>
       <p className="text-gray-700 mb-4">{description}</p>
       <button 
         onClick={onStartQuiz} 
